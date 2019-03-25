@@ -1,0 +1,1262 @@
+$(document).ready(function ()
+{
+	// 获取当日违法抓拍数
+	getIllegalCaptureVolumeDsa("31010400001");
+	// 展示违法信息
+	getIllegalTypeDsa("31010400001");
+	// 展示当日断面流量
+	showTransectFlow("31010400001");
+	// 测试路口基础数据
+	getCross("31010400001");
+	getCrossSaturation("1315");
+	getCrossIndexList("1315");
+	connectSocket("1315", "31010400001");
+	// 模拟第一次请求
+	getPhaseRtData("1315");
+	getEquipmentFailureList("31010400001");
+	loadPlateApanageScatter("31010400001");
+})
+/**
+ * 获取路口信息列表
+ */
+function getCrossRoadsList ()
+{
+	var crossRoadsQueryBo = new Object();
+	crossRoadsQueryBo.idOrName = $("#inputSearchId").val().replace(/\s+/g, "");
+	
+	jQuery.ajax({
+		contentType : "application/json;charset=utf-8",
+		type : "POST",
+		cache : false,
+		dataType : "json",
+		url : contextPath + "/rbx/sa/trafficSituation/getCrossRoadsList.data?_=" + Math.random(),
+		async : true,
+		data : JSON.stringify(crossRoadsQueryBo),
+		success : function (result)
+		{
+			if (result != null)
+			{
+				var listTemplate = $("#crossListId");
+				// 添加数据之前先清理一下模板数据
+				listTemplate.empty();
+				
+				for(var index = 0; index < result.length; index++)
+				{
+					// 从后台返回的list中去循环取没一个对象
+					var vo = result[index];
+					
+					// 拼一个HTML模板渲染页面
+					var htmlTemplate = '<tr>' + '<td width="36%">' + vo.crossId + '</td>' + '<td>' + vo.crossName + '</td>' + '<td style="display: none">' + vo.scatsId + '</td>' + '</tr>';
+					
+					// 将HTML模板添加到数据库模板中
+					listTemplate.append(htmlTemplate);
+				}
+				
+				// 点击基础数据一行调用其他方法进行数据渲染
+				$("#crossListId tr").click(function ()
+				{
+					// 获取crossId和scatsId的值
+					var crossId = $(this).children().eq(0).text();
+					var scatsId = $(this).children().eq(2).text();
+					
+					// 基础信息、违法、断面、设备故障传crossId
+					if (crossId != "")
+					{
+						getCross(crossId);
+						getEquipmentFailureList(crossId);
+						loadPlateApanageScatter(crossId);
+						getIllegalCaptureVolumeDsa(crossId);
+						getIllegalTypeDsa(crossId);
+						showTransectFlow(crossId);
+						changeScats(crossId);
+						showGisQueueLength(crossId);
+						
+					}
+					// 饱和度、路口指数传scatsId
+					if (scatsId != "")
+					{
+						getCrossSaturation(scatsId);
+						getCrossIndexList(scatsId);
+						getPhaseRtData(scatsId);
+						
+					}
+				})
+
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			console.log("failed")
+		}
+	});
+}
+/**
+ * 获取路口信息
+ */
+function getCross (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getCross.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (vo)
+		{
+			if (vo != null)
+			{
+				$("#crossNameId").text(vo.crossName);
+				$("#areaCodeId").text(vo.areaName);
+				$("#streetId").text(vo.crossName);
+				$("#SCATSCodeId").text(vo.scatsId);
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			
+		}
+	});
+}
+/**
+ * 获取路口指标信息-饱和度
+ */
+function getCrossSaturation (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getCrossSaturation.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (vo)
+		{
+			if (vo != null)
+			{
+				$("#crossSaturationId").text(vo.crossAveSaturation);
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			
+		}
+	});
+}
+/**
+ * 获取路口指标信息-路口指数
+ */
+function getCrossIndexList (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getCrossIndexList.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			if (result != null)
+			{
+				var array = new Array();
+				
+				// 路口指数统计图配置
+				var crossIndicatorChart = echarts.init(document.getElementById('crossIndicatorDiv'));
+				
+				array.push(result.stateNum);
+				
+				crossIndicatorOption.series[0].data = array;
+				
+				crossIndicatorChart.setOption(crossIndicatorOption);
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			
+		}
+	});
+}
+/**
+ * 获取路口指标信息-设备中断情况
+ */
+function getEquipmentFailureList (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getEquipmentFailureList.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			if (result.voList != null && result.voList.length > 0)
+			{
+				// 设备故障中断情况统计图配置
+				var equipmentFailureChart = echarts.init(document.getElementById('equipmentFailureDiv'));
+				
+				// 总设备数
+				var arrayAll = [];
+				// 正常、故障设备数
+				var arrayOther = [];
+				
+				for(var i = 0; i < result.voList.length; i++)
+				{
+					var obj = new Object();
+					var vo = result.voList[i];
+					obj.name = vo.name;
+					obj.value = vo.total;
+					
+					var normalObj = new Object();
+					normalObj.name = vo.name + "正常";
+					normalObj.value = vo.normalNum;
+					
+					var faultObj = new Object();
+					faultObj.name = vo.name + "故障";
+					faultObj.value = vo.faultNum;
+					
+					arrayAll.push(obj);
+					arrayOther.push(normalObj);
+					arrayOther.push(faultObj);
+				}
+			}
+			equipmentFailureOption.series[0].data = arrayAll;
+			equipmentFailureOption.series[1].data = arrayOther;
+			
+			equipmentFailureChart.setOption(equipmentFailureOption);
+			
+			equipmentFailureChart.on('click', function (params)
+			{
+				$('.gis-shebei-gz-box').show().addClass('zoomIn').removeClass('zoomOut');
+				
+				var deviceType = params.data.name.substring(0, 2);
+				var deviceStatus = '';
+				if (params.data.name.length > 3)
+				{
+					deviceStatus = params.data.name.substring(2, 4);
+				}
+				else
+				{
+					deviceStatus = '';
+				}
+				// 加载设备中断详细信息列表
+				getEquipmentFailureDetailList(crossId, deviceType, deviceStatus);
+			});
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			
+		}
+	});
+}
+/**
+ * 获取路口指标信息-设备中断详细情况
+ */
+function getEquipmentFailureDetailList (crossId, deviceType, deviceStatus)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getEquipmentFailureDetailList.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId,
+			deviceType : deviceType,
+			deviceStatus : deviceStatus
+		},
+		success : function (result)
+		{
+			if (result != null)
+			{
+				var template = $("#equipmentFailureDetailListId");
+				// 添加数据之前先清理一下模板数据
+				template.empty();
+				
+				for(var index = 0; index < result.voList.length; index++)
+				{
+					// 从后台返回的list中去循环取没一个对象
+					var vo = result.voList[index];
+					
+					var deviceId;
+					if (deviceType == '灯组')
+					{
+						deviceId = vo.deviceId + '_' + vo.lightId;
+					}
+					else
+					{
+						deviceId = vo.deviceId;
+					}
+					
+					// 拼一个HTML模板渲染页面
+					var htmlTemplate = '<tr>' + '<td width="46%">' + deviceId + '</td>' + '<td  width="27%">' + vo.deviceType + '</td>' + '<td  width="27%">' + vo.deviceStatus + '</td>' + '</tr>';
+					
+					// 将HTML模板添加到数据库模板中
+					template.append(htmlTemplate);
+				}
+				
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 获取当日违法抓拍数
+ */
+function getIllegalCaptureVolumeDsa (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getIllegalCaptureVolumeDsa.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			$("#dataNums").text(result);
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 展示违法信息
+ */
+function getIllegalTypeDsa (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getIllegalTypeDsa.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			var xAxisData = result.xAxisData;
+			var series0Data = result.series0Data;
+			var illegalTypeDsaChart = echarts.init(document.getElementById('illegalTypeDsaDiv'));
+			if (xAxisData != null && xAxisData.length > 0)
+			{
+				illegalTypeDsaOption.xAxis.data = xAxisData;
+			}
+			else
+			{
+				illegalTypeDsaOption.xAxis.data = null;
+			}
+			if (series0Data != null && series0Data.length > 0)
+			{
+				var maxValue = -1;
+				for(var index = 0; index < series0Data.length; index++)
+				{
+					if (maxValue < series0Data[index])
+					{
+						maxValue = series0Data[index];
+					}
+				}
+				
+				var dataShadow = [];
+				for(var i = 0; i < series0Data.length; i++)
+				{
+					dataShadow.push(maxValue + 15);
+				}
+				
+				illegalTypeDsaOption.series[0].data = dataShadow;
+				illegalTypeDsaOption.series[1].data = series0Data;
+			}
+			else
+			{
+				illegalTypeDsaOption.series[0].data = null;
+				illegalTypeDsaOption.series[1].data = null;
+			}
+			illegalTypeDsaChart.setOption(illegalTypeDsaOption);
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+var timer = null;
+var directionName = "";
+function getDirectionName ()
+{
+	if ($('.gis-guoche-box').css('display') == 'block')
+	{
+		showRoadwayPassPlateRtRecord(directionName);
+	}
+}
+/**
+ * 展示当日断面流量
+ */
+function showTransectFlow (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/showTransectFlow.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			$("#transectCrossId").val(crossId);
+			var xAxisData = result.xAxisData;
+			var seriesData = result.seriesData;
+			var seriesName = result.seriesName;
+			var transectFlowChart = echarts.init(document.getElementById('transectFlowDiv'));
+			if (seriesName != null && seriesName.length > 0)
+			{
+				transectFlowOption.legend.show = true;
+				transectFlowOption.legend.data = seriesName;
+			}
+			else
+			{
+				transectFlowOption.legend.show = false;
+			}
+			if (xAxisData != null && xAxisData.length > 0)
+			{
+				transectFlowOption.xAxis.data = xAxisData;
+			}
+			else
+			{
+				transectFlowOption.xAxis.data = null;
+			}
+			if (seriesData != null && seriesData.length > 0)
+			{
+				while (seriesData.length < transectFlowOption.series.length)
+				{
+					transectFlowOption.series.pop();
+				}
+				if (seriesData.length == 1)
+				{
+					transectFlowOption.series[0].data = seriesData[0];
+					transectFlowOption.series[0].name = seriesName[0];
+				}
+				if (seriesData.length == 2)
+				{
+					transectFlowOption.series[0].data = seriesData[0];
+					transectFlowOption.series[0].name = seriesName[0];
+					transectFlowOption.series[1].data = seriesData[1];
+					transectFlowOption.series[1].name = seriesName[1];
+				}
+				if (seriesData.length >= 3)
+				{
+					transectFlowOption.series[0].data = seriesData[0];
+					transectFlowOption.series[0].name = seriesName[0];
+					transectFlowOption.series[1].data = seriesData[1];
+					transectFlowOption.series[1].name = seriesName[1];
+					transectFlowOption.series[2].data = seriesData[2];
+					transectFlowOption.series[2].name = seriesName[2];
+				}
+			}
+			else
+			{
+				transectFlowOption.series[0].data = null;
+				transectFlowOption.series[1].data = null;
+				transectFlowOption.series[2].data = null;
+			}
+			
+			transectFlowChart.setOption(transectFlowOption);
+			transectFlowChart.on('legendselectchanged', function (param)
+			{
+				$('.gis-guoche-box').show().addClass('zoomIn').removeClass('zoomOut');
+				showRoadwayPassPlateRtRecord(param.name);
+				// 设置断面车道下拉框
+				$("#transectNames").empty();
+				for(var index = 0; index < seriesName.length; index++)
+				{
+					$('#transectNames').append("<li> <a href='javascript:;' onclick='showRoadwayPassPlateRtRecordByTransect(\"" + seriesName[index] + "\",\"" + index + "\")'>" + seriesName[index] + "</a><span class='line'>" + "</span></li>");
+					if (param.name == seriesName[index])
+					{
+						crossTabShow(index);
+					}
+				}
+				// 定时刷新断面对应车道数据
+				if ($('.gis-guoche-box').css('display') == 'block')
+				{
+					directionName = param.name;
+					if (timer != null)
+					{
+						clearInterval(timer);
+					}
+					timer = setInterval(getDirectionName, 5000)
+				}
+			});
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+var allApanageArr = [ "新", "宁", "藏", "桂", "蒙", "吉", "辽", "冀", "青", "黑", "甘", "陕", "豫", "鲁", "晋", "鄂", "滇", "湘", "苏", "赣", "浙", "皖", "粤", "黔", "川", "闽", "琼", "台", "港", "澳", "京", "津", "沪", "渝" ];
+var plateApanageArr = [];
+function loadPlateApanageScatter (crossId)
+{
+	
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + '/rbx/sa/trafficSituation/getPlateApanageRtVoList.data?_=' + Math.random(),
+		data : {
+			"crossId" : crossId
+		},
+		success : function (result)
+		{
+			var vehicleBubbleDiv = $("#vehicleBubble");
+			var plateApanageTableDiv = $("#plateApanageTable");
+			var pagePoint = $("#pagePoint");
+			vehicleBubbleDiv.empty();
+			plateApanageTableDiv.empty();
+			pagePoint.empty();
+			var chooseApanageArr = [];
+			var voList = result.voList;
+			if (voList != null && voList.length > 0)
+			{
+				plateApanageArr = voList;
+				var page = 1;
+				for(var i = 0; i < voList.length; i++)
+				{
+					var num = i + 1;
+					// 创建分页的点
+					var isBuildPage = num % 6;
+					if (num == 1)
+					{
+						pagePoint.append("<span onclick='changePage(" + page + ")' class='dot active'></span>");
+						page++;
+					}
+					else if (num != 1 && isBuildPage == 1)
+					{
+						pagePoint.append("<span onclick='changePage(" + page + ")' class='dot'></span>");
+						page++;
+					}
+					if (i == 0)
+					{
+						vehicleBubbleDiv.append("<a href='#'><font class='red xl'>" + voList[i].plateApanage + "</font></a>");
+						plateApanageTableDiv.append("<tr id="
+								+ num + " class='open-guoche red'><td width='16%'><font class='bg-num '>01</font></td><td width='20%' class='font-sm'>" + voList[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>" + voList[i].apanageNum
+								+ "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + voList[i].vehicleProportion + "</font></td></tr>");
+					}
+					else if (i == 1)
+					{
+						vehicleBubbleDiv.append("<a href='#'><font class='orange lg'>" + voList[i].plateApanage + "</font></a>");
+						plateApanageTableDiv.append("<tr class='open-guoche orange'><td><font class='bg-num '>0"
+								+ num + "</font></td><td class='font-sm'>" + voList[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>" + voList[i].apanageNum + "</font></td><td><font data-counter='counterup' data-value='59' class='font-blue'>"
+								+ voList[i].vehicleProportion + "</font></td></tr>");
+					}
+					else if (i == 2)
+					{
+						vehicleBubbleDiv.append("<a href='#'><font class='yellow md'>" + voList[i].plateApanage + "</font></a>");
+						plateApanageTableDiv.append("<tr class='open-guoche yellow'><td><font class='bg-num '>0"
+								+ num + "</font></td><td class='font-sm'>" + voList[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>" + voList[i].apanageNum + "</font></td><td><font data-counter='counterup' data-value='59' class='font-blue'>"
+								+ voList[i].vehicleProportion + "</font></td></tr>");
+					}
+					else if (i == 3)
+					{
+						vehicleBubbleDiv.append("<a href='#'><font class='green sm'>" + voList[i].plateApanage + "</font></a>");
+						plateApanageTableDiv.append("<tr class='open-guoche green'><td><font class='bg-num '>0"
+								+ num + "</font></td><td class='font-sm'>" + voList[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>" + voList[i].apanageNum + "</font></td><td><font data-counter='counterup' data-value='59' class='font-blue'>"
+								+ voList[i].vehicleProportion + "</font></td></tr>");
+					}
+					else
+					{
+						vehicleBubbleDiv.append("<a href='#'><font class='default'>" + voList[i].plateApanage + "</font></a>");
+					}
+					if (i > 3 && i < 6)
+					{
+						plateApanageTableDiv.append("<tr class='open-guoche blue'><td><font class='bg-num '>0"
+								+ num + "</font></td><td class='font-sm'>" + voList[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>" + voList[i].apanageNum + "</font></td><td><font data-counter='counterup' data-value='59' class='font-blue'>"
+								+ voList[i].vehicleProportion + "</font></td></tr>");
+					}
+					chooseApanageArr.push(voList[i].plateApanage);
+				}
+				$('.cutpage .dot').click(function ()
+				{
+					$(this).addClass('active').siblings().removeClass('active');
+				})
+			}
+			for(var j = 0; j < allApanageArr.length; j++)
+			{
+				if (chooseApanageArr.indexOf(allApanageArr[j]) < 0)
+				{
+					vehicleBubbleDiv.append("<a href='#'><font class='default'>" + allApanageArr[j] + "</font></a>");
+				}
+			}
+			if (screen.width < 1900)
+			{
+				$(".shudi").windstagball({
+					radius : 68,
+					speed : 10
+				});
+			}
+			else
+			{
+				$(".shudi").windstagball({
+					radius : 80,
+					speed : 10
+				});
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+function changePage (pageNum)
+{
+	var pagePoint = $("#pagePoint");
+	var plateApanageTableDiv = $("#plateApanageTable");
+	plateApanageTableDiv.empty();
+	var startNum = 6 * (pageNum - 1);
+	var endNum = 6 * pageNum;
+	for(var i = 0; i < plateApanageArr.length; i++)
+	{
+		var num = i + 1;
+		if (num > startNum && num <= endNum)
+		{
+			if (num < 10)
+			{
+				if (num == 1)
+				{
+					plateApanageTableDiv.append("<tr id="
+							+ num + " class='open-guoche red'><td width='16%'><font class='bg-num '>0" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+							+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+				}
+				else if (num == 2)
+				{
+					plateApanageTableDiv.append("<tr id="
+							+ num + " class='open-guoche orange'><td width='16%'><font class='bg-num '>0" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+							+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+				}
+				else if (num == 3)
+				{
+					plateApanageTableDiv.append("<tr id="
+							+ num + " class='open-guoche yellow'><td width='16%'><font class='bg-num '>0" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+							+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+				}
+				else if (num == 4)
+				{
+					plateApanageTableDiv.append("<tr id="
+							+ num + " class='open-guoche green'><td width='16%'><font class='bg-num '>0" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+							+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+				}
+				else
+				{
+					plateApanageTableDiv.append("<tr id="
+							+ num + " class='open-guoche blue'><td width='16%'><font class='bg-num '>0" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+							+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+				}
+			}
+			else
+			{
+				plateApanageTableDiv.append("<tr id="
+						+ num + " class='open-guoche blue'><td width='16%'><font class='bg-num '>" + num + "</font></td><td width='20%' class='font-sm'>" + plateApanageArr[i].plateApanage + "</td><td><font data-counter='counterup' data-value='20' class='font-yellow'>"
+						+ plateApanageArr[i].apanageNum + "</font></td><td width='26%'><font data-counter='counterup' data-value='59' class='font-blue'>" + plateApanageArr[i].vehicleProportion + "</font></td></tr>");
+			}
+		}
+	}
+}
+
+/**
+ * 展示断面实时过车数据
+ */
+function showPassPlateRtRecord (crossId)
+{
+	$('.gis-guoche-box').show().addClass('zoomIn').removeClass('zoomOut');
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/showPassPlateRtRecord.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			var voList = result;
+			$('#passPlateRtDiv').empty();
+			for(var index = 0; index < voList.length; index++)
+			{
+				$('#passPlateRtDiv').append(
+						"<li class='col-xs-3'><table class='table-duanmian'><tr><th>"
+								+ voList[index].transectName + "</th></tr><tr><td><font>号牌:" + "</font>" + voList[index].flapperNumber + "</td></tr><tr><td><font>号牌颜色:" + "</font>" + voList[index].flapperColor + "</td></tr><tr><td><font>车速:" + "</font>" + voList[index].plateSpeed
+								+ "km/h</td></tr><tr><td>" + "<img src='" + voList[index].panoramaPicture + "'/>" + "</td></tr></table></li>");
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 根据断面展示该断面所有车道过车信息
+ */
+function showRoadwayPassPlateRtRecord (name)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/showRoadwayPassPlateRtRecord.data" + "?_=" + Math.random(),
+		data : {
+			crossId : $("#transectCrossId").val(),
+			direction : name
+		},
+		success : function (result)
+		{
+			var voList = result;
+			$('#passPlateRtDiv').empty();
+			for(var index = 0; index < voList.length; index++)
+			{
+				$("#roadwayName").text(voList[0].transectName);
+				$('#passPlateRtDiv').append(
+						"<li class='col-xs-3'><table class='table-duanmian'><tr><th><font>车道"
+								+ voList[index].roadwayCode + "</font></th></tr><tr><td><font>号牌:" + "</font>" + voList[index].flapperNumber + "</td></tr><tr><td><font>号牌颜色:" + "</font>" + voList[index].flapperColor + "</td></tr><tr><td><font>车速:" + "</font>" + voList[index].plateSpeed
+								+ "km/h</td></tr><tr><td>" + "<img src='" + voList[index].panoramaPicture + "'/>" + "</td></tr></table></li>");
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 选择某个断面展示该断面所有车道过车信息
+ */
+function showRoadwayPassPlateRtRecordByTransect (name, index)
+{
+	crossTabShow(index);
+	directionName = name;
+	showRoadwayPassPlateRtRecord(directionName);
+}
+
+/**
+ * 信号灯页面报警信息
+ */
+function getSignalLampRtAlarm (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getSignalLampRtAlarm.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			$("#crossName").html(result.crossName);
+			$("#updateTime").html("更新时间：" + result.updateTime);
+			$("#scatsStatus").text(result.alarmFlag);
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 信号灯页面设备列表信息
+ */
+function getSignalEquipmentList (crossId, direction, runPoint, lampNumberStr)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getSignalEquipmentList.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId,
+			direction : direction,
+			runPoint : runPoint,
+			lampNumberStr : lampNumberStr
+		},
+		success : function (result)
+		{
+			$(".shebei-tab-box .tab-right ul li").click(function ()
+			{
+				$("#runPoint").val("");
+				$("#lampNumberStr").val("");
+			});
+			var voList = result;
+			$("#direction").val(direction);
+			if (direction == "E")
+			{
+				tabShow(0);
+				$('#equipmentEList').empty();
+				for(var index = 0; index < voList.length; index++)
+				{
+					if (voList[index].lampColorName == "红灯")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle red'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "红灯倒计时")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left red'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle green'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯倒计时")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left green'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "黄灯")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle yellow'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "未知")
+					{
+						$('#equipmentEList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='grey'>"
+										+ voList[index].lampColorName + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+				}
+			}
+			if (direction == "S")
+			{
+				tabShow(1);
+				$('#equipmentSList').empty();
+				for(var index = 0; index < voList.length; index++)
+				{
+					if (voList[index].lampColorName == "红灯")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle red'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "红灯倒计时")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left red'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle green'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯倒计时")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left green'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "黄灯")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle yellow'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "未知")
+					{
+						$('#equipmentSList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='grey'>"
+										+ voList[index].lampColorName + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+				}
+			}
+			if (direction == "W")
+			{
+				tabShow(2);
+				$('#equipmentWList').empty();
+				for(var index = 0; index < voList.length; index++)
+				{
+					if (voList[index].lampColorName == "红灯")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle red'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "红灯倒计时")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left red'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle green'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯倒计时")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left green'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "黄灯")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle yellow'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "未知")
+					{
+						$('#equipmentWList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='grey'>"
+										+ voList[index].lampColorName + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+				}
+			}
+			if (direction == "N")
+			{
+				tabShow(3);
+				$('#equipmentNList').empty();
+				for(var index = 0; index < voList.length; index++)
+				{
+					if (voList[index].lampColorName == "红灯")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle red'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "红灯倒计时")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left red'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle green'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "绿灯倒计时")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName
+										+ "</td><td width='10%'><i class='fa fa-history fa-spin-left green'>" + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "黄灯")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='fa fa-circle yellow'>"
+										+ "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+					if (voList[index].lampColorName == "未知")
+					{
+						$('#equipmentNList').append(
+								"<tr><td width='15%'>"
+										+ voList[index].lampNumber + "</td><td width='15%'>" + voList[index].runPoint + "</td><td>" + voList[index].applicationCategory + "</td><td width='15%'>" + voList[index].communicationStateName + "</td><td width='10%'><i class='grey'>"
+										+ voList[index].lampColorName + "</i></td><td width='15%'>" + voList[index].workStateName + "</td></tr>");
+					}
+				}
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 展示机动车红绿灯状态
+ */
+function showVehicleSignalState (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/showVehicleSignalState.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			var voList = result;
+			for(var index = 0; index < voList.length; index++)
+			{
+				var direction = voList[index].direction == "E" ? "east" : (voList[index].direction == "W" ? "west" : (voList[index].direction == "S" ? "south" : "north"));
+				var runPoint = voList[index].runPoint == "直行" ? "straight" : (voList[index].runPoint == "左转" ? "left" : "right");
+				var lampColorName =
+						(voList[index].lampColorName == "红灯" || voList[index].lampColorName == "红灯倒计时") ? "red" : ((voList[index].lampColorName == "绿灯" || voList[index].lampColorName == "绿灯倒计时") ? "green" : (voList[index].lampColorName == "黄色" ? "yellow" : (voList[index].lampColorName == "未知"
+								? "unknown" : (voList[index].lampColorName == "故障" ? "fault" : ""))));
+				if (direction == "east" || direction == "west")
+				{
+					var img = $("#" + voList[index].signalGroup);
+					if (img.length == 0)
+					{
+						var imgHtml =
+								"<img id='"
+										+ voList[index].signalGroup + "' src='" + webappResource + "/resources/assets/layouts/signal-lamp/" + direction + "-" + runPoint + "-" + lampColorName + ".svg'  class='signal w-signal' style='top:" + voList[index].signalOrdinate + "px;left:"
+										+ voList[index].signalAbscissa + "px;' onclick='showVehicleSignalList(\"" + crossId + "\",\"" + voList[index].direction + "\",\"" + voList[index].runPoint + "\")'/>"
+
+						$('#signalLocation').append(imgHtml);
+					}
+					else
+					{
+						img.attr("src", webappResource + "/resources/assets/layouts/signal-lamp/" + direction + "-" + runPoint + "-" + lampColorName + ".svg");
+					}
+				}
+				if (direction == "south" || direction == "north")
+				{
+					var imgHtml =
+							"<img id='"
+									+ voList[index].signalGroup + "' src='" + webappResource + "/resources/assets/layouts/signal-lamp/" + direction + "-" + runPoint + "-" + lampColorName + ".svg'  class='signal h-signal' style='top:" + voList[index].signalOrdinate + "px;left:"
+									+ voList[index].signalAbscissa + "px;' onclick='showVehicleSignalList(\"" + crossId + "\",\"" + voList[index].direction + "\",\"" + voList[index].runPoint + "\")'/>"
+
+					$('#signalLocation').append(imgHtml);
+				}
+				else
+				{
+					img.attr("src", webappResource + "/resources/assets/layouts/signal-lamp/" + direction + "-" + runPoint + "-" + lampColorName + ".svg");
+				}
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 展示人行灯状态
+ */
+function showPedestrianSignalState (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/showPedestrianSignalState.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			var voList = result;
+			for(var index = 0; index < voList.length; index++)
+			{
+				var lampColorName = voList[index].lampColorName == "红灯" ? "red" : (voList[index].lampColorName == "绿灯" ? "green" : "fault");
+				var img = $("#" + voList[index].signalNumber);
+				if (img.length == 0)
+				{
+					var imgHtml =
+							"<img id='"
+									+ voList[index].signalNumber + "' src='" + webappResource + "/resources/assets/layouts/signal-lamp/peple-signal-" + lampColorName + ".svg'  class='signal h-peple' style='top:" + voList[index].signalOrdinate + "px;left:" + voList[index].signalAbscissa
+									+ "px;' onclick='showPedestrianSignalList(\"" + crossId + "\",\"" + voList[index].direction + "\",\"" + voList[index].signalNumber + "\")'/>"
+					$('#signalLocation').append(imgHtml);
+				}
+				else
+				{
+					img.attr("src", webappResource + "/resources/assets/layouts/signal-lamp/peple-signal-" + lampColorName + ".svg");
+				}
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+		}
+	});
+}
+
+/**
+ * 点击机动车灯刷新信号灯列表事件
+ */
+function showVehicleSignalList (crossId, direction, runPoint)
+{
+	$("#runPoint").val(runPoint);
+	$("#lampNumberStr").val("");
+	getSignalEquipmentList(crossId, direction, runPoint, '');
+}
+
+/**
+ * 点击人行灯刷新信号灯列表事件
+ */
+function showPedestrianSignalList (crossId, direction, lampNumber)
+{
+	$("#lampNumberStr").val(lampNumber);
+	$("#runPoint").val("");
+	getSignalEquipmentList(crossId, direction, '', lampNumber);
+}
+function showSignalState (crossId, direction, runPoint, lampNumberStr)
+{
+	getSignalEquipmentList(crossId, direction, runPoint, lampNumberStr);
+	getSignalLampRtAlarm(crossId);
+	showVehicleSignalState(crossId);
+	showPedestrianSignalState(crossId);
+	setInterval(setIntervalSignal, 10000);
+}
+
+function setIntervalSignal ()
+{
+	getSignalEquipmentList($("#transectCrossId").val(), $("#direction").val(), $("#runPoint").val(), $("#lampNumberStr").val());
+	getSignalLampRtAlarm($("#transectCrossId").val());
+	showVehicleSignalState($("#transectCrossId").val());
+	showPedestrianSignalState($("#transectCrossId").val());
+}
+
+/**
+ * 信号灯东西南北方向按钮切换
+ */
+function tabShow (num)
+{
+	$(".shebei-tab-box .tab-right ul li").each(function (index)
+	{
+		if (index == num)
+		{
+			$(".shebei-tab-content .content-info:visible").hide();
+			$(".shebei-tab-box .tab-right ul li").removeClass("active");
+			
+			$(".shebei-tab-content .content-info:eq(" + index + ")").show();
+			$(this).addClass("active");
+			setTimeout(function ()
+			{
+			}, 600)
+			return true;
+		}
+	});
+}
+
+/**
+ * 路口方向按钮切换
+ */
+function crossTabShow (num)
+{
+	$(".guoche-tabbox .tab-right ul li").each(function (index)
+	{
+		if (index == num)
+		{
+			$(".guoche-tab-content .content-info:visible").hide();
+			$(".guoche-tabbox .tab-right ul li").removeClass("active");
+			
+			$(".guoche-tab-content .content-info:eq(" + index + ")").show();
+			$(this).addClass("active");
+			setTimeout(function ()
+			{
+			}, 600)
+			return true;
+		}
+	});
+}
+
+/**
+ * Gis-根据车道排队长度渲染不同的效果
+ */
+function showGisQueueLength (crossId)
+{
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getQueueLengthList.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			if (result.voList != null && result.voList.length > 0)
+			{
+				var array = new Array();
+				
+				for(var i = 0; i < result.voList.length; i++)
+				{
+					var obj = new Object();
+					var vo = result.voList[i];
+					obj.laneId = crossId + "-" + vo.trackNo;
+					obj.queueLength = vo.queueLength;
+					
+					array.push(obj);
+				}
+			}
+			// 将数组传给地图接口
+			if (map != null)
+			{
+				map.setCrossQueueLength(array);
+			}
+		},
+		error : function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			
+		}
+	});
+}
+
+/**
+ * 展示违法抓拍图片和视频
+ */
+function getIllegalSnapPictureAndVideo (crossId)
+{
+	$('.gis-zhuapai-box').show().addClass('zoomIn').removeClass('zoomOut');
+	jQuery.ajax({
+		contentType : "application/x-www-form-urlencoded;charset=utf-8",
+		type : "POST",
+		url : contextPath + "/rbx/sa/trafficSituation/getIllegalSnapPictureAndVideo.data" + "?_=" + Math.random(),
+		data : {
+			crossId : crossId
+		},
+		success : function (result)
+		{
+			var voList = result;
+			$('#illegalPictureList').empty();
+			for(var index = 0; index < voList.length; index++)
+			{
+				$('#illegalPictureList').append("<li><div class='small-img'><img src='" + voList[index].panoramaPicture + "' onclick='showIllegalPicture(\"" + voList[index].panoramaPicture + "\",\"" + voList[index].passTime + "\",\"" + voList[index].flapperNumber + "\",\"" + voList[index].errorReason + "\")'/></div></li>");
+			}
+			$("#illegalPicture").append("<img src='" + voList[0].panoramaPicture + "'/>");
+			$("#illegalThumbnail").empty();
+			$("#illegalThumbnail").append("<img src='" + voList[0].panoramaPicture + "'  width='72' height='56'/>");
+			$("#pictureMessage").text(voList[0].passTime + ",车牌号为" + voList[0].flapperNumber + voList[0].errorReason);
+			var magnifierConfig = {
+					magnifier : "#magnifier1",// 最外层的大容器
+					width : 706,// 承载容器宽
+					height : 460,// 承载容器高
+					moveWidth : null,// 如果设置了移动盒子的宽度，则不计算缩放比例
+					zoom : 5
+				// 缩放比例
+				};
+			var _magnifier = magnifier(magnifierConfig);
+		}
+	});
+	
+}
+
+/**
+ * 展示违法抓拍图片列表显示具体图片
+ */
+function showIllegalPicture (panoramaPicture,passTime,flapperNumber,errorReason)
+{
+	$("#illegalPicture").empty();
+	$("#illegalThumbnail").empty();
+	$("#illegalPicture").append("<img src='" + panoramaPicture + "'/>");
+	$("#illegalThumbnail").append("<img src='" + panoramaPicture + "'  width='72' height='56'/>");
+	$("#pictureMessage").text(passTime + ",车牌号为" + flapperNumber + errorReason);
+}

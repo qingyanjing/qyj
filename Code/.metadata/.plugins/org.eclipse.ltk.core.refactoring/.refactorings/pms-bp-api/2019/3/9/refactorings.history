@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pms-bp-api/src/main/java/org/wisdom/pms/bp/api/config/LogUtils.java&apos; to &apos;LoggerUtils.java&apos;" description="Rename resource &apos;LogUtils.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/org/wisdom/pms/bp/api/config/LogUtils.java" name="LoggerUtils.java" stamp="1551433664030" updateReferences="true"/>
+</session>

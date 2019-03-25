@@ -1,0 +1,5 @@
+1551670442478	Move 'LogEnum.java' to 'constant'
+1551670447834	Move 'LoggerUtils.java' to 'util'
+1552011568861	Move 'Message.java' to 'commonBo'
+1552012469623	Rename resource 'PageBean.java'
+1552014628670	Rename resource 'commonBo'

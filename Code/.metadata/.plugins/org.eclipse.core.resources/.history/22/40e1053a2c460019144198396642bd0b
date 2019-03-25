@@ -1,0 +1,19 @@
+package springMvcTheory.demo.action;
+
+import springMvcTheory.demo.service.IDemoService;
+
+/** 
+* @author 作者：huangpeng E-mail: 
+* @date 创建时间：2019年3月14日 下午3:25:56 
+* @version 1.0 
+* @parameter  
+* @since  
+* @return  
+*/
+@HPController
+public class DemoAction {
+
+	private IDemoService demoService;
+	
+	
+}

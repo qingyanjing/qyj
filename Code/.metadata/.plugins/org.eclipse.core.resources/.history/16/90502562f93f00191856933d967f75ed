@@ -1,0 +1,410 @@
+2019-03-06 09:48:05.566 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:51:11.919 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:51:18.367 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:52:11.037 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:53:20.985 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:53:53.210 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:57:11.521 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfig' defined in file [D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes\org\wisdom\pms\bp\api\config\CorsConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.wisdom.pms.bp.api.config.CorsConfig$$EnhancerBySpringCGLIB$$21d3af29]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Implicit super constructor WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter() is undefined for default constructor. Must define an explicit constructor
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1287) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$137/1434617828.getObject(Unknown Source) ~[?:?]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.wisdom.pms.bp.api.config.CorsConfig$$EnhancerBySpringCGLIB$$21d3af29]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Implicit super constructor WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter() is undefined for default constructor. Must define an explicit constructor
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1279) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 23 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Implicit super constructor WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter() is undefined for default constructor. Must define an explicit constructor
+
+	at org.wisdom.pms.bp.api.config.CorsConfig.<init>(CorsConfig.java:13) ~[classes/:?]
+	at org.wisdom.pms.bp.api.config.CorsConfig$$EnhancerBySpringCGLIB$$21d3af29.<init>(<generated>) ~[classes/:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_51]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_51]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1279) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 23 more
+2019-03-06 09:59:18.161 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:59:25.225 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 09:59:36.108 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:00:18.252 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:03:32.106 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:03:57.733 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:14.188 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:43.377 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:48.124 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:51.266 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:52.405 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:53.039 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:04:53.633 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:05:05.665 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:05:06.551 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:05:09.186 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:05:33.224 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:07:17.561 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:07:56.296 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:15:38.467 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:25:56.201 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:25:57.970 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:25:58.744 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:26:00.372 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:26:20.402 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:30:58.218 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:03.316 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:04.216 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:04.936 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:06.804 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:07.736 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:08.427 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:09.038 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:09.725 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:11.273 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:20.339 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:21.378 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:22.441 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:23.152 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:23.818 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:24.420 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:24.998 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:25.621 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:26.287 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:27.131 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:27.768 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:28.331 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:28.922 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:29.582 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:30.195 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:30.830 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:31.508 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:32.127 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:32.737 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:31:33.358 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:48.997 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:55.539 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:56.383 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:57.013 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:57.599 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:58.139 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:58.646 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:59.182 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:33:59.712 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:00.311 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:00.774 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:00.996 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:01.184 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:02.856 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:09.664 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:11.420 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:11.860 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:12.186 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:12.427 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:13.335 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:13.837 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:14.492 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:15.159 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:15.908 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:16.580 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:17.133 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:17.668 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:18.186 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:18.687 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:34:19.168 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:14.699 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:18.691 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:20.005 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:20.741 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:21.423 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:22.580 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:23.123 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:23.586 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:24.069 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:24.590 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:25.115 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:25.752 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:43:26.491 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:44:55.295 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:44:56.059 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:44:56.345 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:44:56.551 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:44:56.773 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:50:23.799 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:50:25.961 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 10:50:43.579 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:02:56.700 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:03:20.002 -ERROR  [o-19001-exec-10] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:03:21.502 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:03:22.279 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:03:23.990 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:03:28.813 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:06:38.538 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:08:55.771 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:09:25.545 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:18.135 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:21.588 -ERROR  [io-19001-exec-2] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:22.400 -ERROR  [io-19001-exec-6] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:22.937 -ERROR  [io-19001-exec-3] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:23.523 -ERROR  [io-19001-exec-7] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:24.058 -ERROR  [io-19001-exec-4] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:24.626 -ERROR  [io-19001-exec-5] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:11:25.148 -ERROR  [io-19001-exec-8] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:12:16.048 -ERROR  [io-19001-exec-9] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 11:17:00.859 -ERROR  [io-19001-exec-1] b.a.s.o.ConfigCrossRestService : 错误信息！
+2019-03-06 14:20:41.661 -ERROR  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.io.NotSerializableException: org.wisdom.pms.bp.model.crud.User] with root cause
+java.io.NotSerializableException: org.wisdom.pms.bp.model.crud.User
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184) ~[?:1.8.0_51]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348) ~[?:1.8.0_51]
+	at java.util.ArrayList.writeObject(ArrayList.java:762) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:988) ~[?:1.8.0_51]
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496) ~[?:1.8.0_51]
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432) ~[?:1.8.0_51]
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178) ~[?:1.8.0_51]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348) ~[?:1.8.0_51]
+	at org.springframework.core.serializer.DefaultSerializer.serialize(DefaultSerializer.java:46) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:63) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:35) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:94) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.serializer.DefaultRedisElementWriter.write(DefaultRedisElementWriter.java:43) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.serializer.RedisSerializationContext$SerializationPair.write(RedisSerializationContext.java:241) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.cache.RedisCache.serializeCacheValue(RedisCache.java:238) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:144) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:820) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:429) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.wisdom.pms.bp.service.inner.impl.Users$$EnhancerBySpringCGLIB$$b60b8bf0.getUserList(<generated>) ~[classes/:?]
+	at org.wisdom.pms.bp.service.outer.impl.PmsService.getUserList(PmsService.java:23) ~[classes/:?]
+	at org.wisdom.pms.bp.api.service.inner.impl.UserAssembleService.getUserList(UserAssembleService.java:20) ~[classes/:?]
+	at org.wisdom.pms.bp.api.service.outer.UserRestService.getUserList(UserRestService.java:20) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_51]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_51]
+2019-03-06 17:55:59.681 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more
+2019-03-06 17:57:02.132 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more
+2019-03-06 18:02:40.328 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more
+2019-03-06 18:12:17.605 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more
+2019-03-06 18:13:55.686 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more
+2019-03-06 18:14:17.940 -ERROR  [  restartedMain] o.s.b.SpringApplication        : Application run failed
+java.lang.NoClassDefFoundError: org/springframework/beans/factory/config/BeanDefinitionCustomizer
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.registerBean(AnnotatedBeanDefinitionReader.java:145) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.AnnotatedBeanDefinitionReader.register(AnnotatedBeanDefinitionReader.java:135) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:158) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:135) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:127) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:717) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:392) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.wisdom.pms.bp.api.Application.main(Application.java:11) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.config.BeanDefinitionCustomizer
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_51]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[?:1.8.0_51]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_51]
+	... 16 more

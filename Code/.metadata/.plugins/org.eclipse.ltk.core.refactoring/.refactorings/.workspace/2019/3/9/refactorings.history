@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;pms-bp-api/src/main/resources/application2.yml&apos;" deleteContents="false" description="Delete resource &apos;pms-bp-api/src/main/resources/application2.yml&apos;" element1="/pms-bp-api/src/main/resources/application2.yml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1551433164579"/>
+</session>

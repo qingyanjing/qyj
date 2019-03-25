@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <properties resource="generator/config.properties" />
+    <!-- <classPathEntry location="D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/> -->
+    <context id="my">
+        <!-- 是否生成注释 -->
+        <commentGenerator>
+        	<property name="javaFileEncoding" value="UTF-8" />
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- 数据库连接 -->
+        <jdbcConnection driverClass="${jdbc.driverClass}" connectionURL="${jdbc.url}" userId="${jdbc.user}" password="${jdbc.password}" >
+        	<!-- 获取Oracle元数据 REMARKS信息 -->
+			<property name="remarksReporting" value="true" />
+			<!-- 获取MySql元数据 REMARKS信息 -->
+			<property name="useInformationSchema" value="true" />
+        </jdbcConnection>
+
+        <!-- 生成的包名和工程名 -->
+        <javaModelGenerator targetPackage="${modelTargetPackage}" targetProject="${modelTargetProject}">
+        	<property name="enableSubPackages" value="true" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- xml映射文件   -->
+        <sqlMapGenerator targetPackage="${sqlMapTargetPackage}" targetProject="${sqlMapTargetProject}">
+        	<property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!--  mapper接口    -->
+        <javaClientGenerator targetPackage="${mapperTargetPackage}" targetProject="${mapperTargetProject}" type="XMLMAPPER">
+        	<property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 数据库表-->
+        <table tableName="user" domainObjectName="User">
+			<columnOverride column="id" property="Id"/>
+			<columnOverride column="name" property="Name"/>
+			<columnOverride column="pass" property="Pass"/>
+			<columnOverride column="updateTime" property="updateTime"/>
+			<columnOverride column="createTime" property="createTime"/>
+			<columnOverride column="role" property="role"/>
+			<columnOverride column="dept" property="dept"/>
+		</table>
+		<!-- 数据库表
+        <table tableName="RBX_CONFIG_CROSS" domainObjectName="RbxConfigCross">
+			<columnOverride column="CROSS_NO" property="CrossNo"/>
+			<columnOverride column="CROSS_DESC" property="CrossDesc"/>
+			<columnOverride column="SCATS_ID" property="ScatsId"/>
+			<columnOverride column="MAC" property="Mac"/>
+			<columnOverride column="IP" property="Ip"/>
+			<columnOverride column="AREA_CODE" property="AreaCode"/>
+			<columnOverride column="AREA_DESC" property="AreaDesc"/>
+			<columnOverride column="LONGITUDE" property="LongItude"/>
+			<columnOverride column="LATITUDE" property="LatItude"/>
+		</table>-->
+    </context>
+</generatorConfiguration>

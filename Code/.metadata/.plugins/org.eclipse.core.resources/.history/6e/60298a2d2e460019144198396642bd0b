@@ -1,0 +1,26 @@
+package springMvcTheory.demo.service.impl;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import springMvcTheory.demo.service.IDemoService;
+
+/** 
+* @author 作者：huangpeng E-mail: 
+* @date 创建时间：2019年3月14日 下午3:25:24 
+* @version 1.0 
+* @parameter  
+* @since  
+* @return  
+*/
+public class DemoService implements IDemoService{
+
+	@Override
+	public void query(HttpServletRequest res, HttpServletResponse req, String name) {
+		if("huangpeng".equals(name))
+		{
+			
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+<%@ include file="/WEB-INF/jsp/frame/meta.jsp"%>
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/bootstrap-tabdrop/css/tabdrop.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/fontTwister/css/fontTwister.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/dataStatistics/css/numStatistics.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/s-particles/css/s-particles.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/global/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+<!-- BEGIN THEME GLOBAL STYLES -->
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/shudi.css" rel="stylesheet" type="text/css">
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/motion.css" rel="stylesheet" type="text/css">
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/animate.css" rel="stylesheet" type="text/css">
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/custom.css" rel="stylesheet" type="text/css" />
+<link href="${webappProperties['rbx-base-resource']}/resources/assets/layouts/css/magnifier.css" rel="stylesheet" type="text/css" />
+<!-- web-gis -->
+<link rel="stylesheet" type="text/css" href="${webappProperties['webapp-gis']}/arcgis_js_api/library/4.10/esri/css/main.css">

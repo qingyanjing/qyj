@@ -1,0 +1,986 @@
+2019-03-06 09:46:38.464 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:46:38.501 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:46:38.855 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-06 09:46:38.857 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-06 09:46:40.964 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:46:40.971 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:46:41.027 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2019-03-06 09:46:41.070 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:46:41.074 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:46:41.124 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-03-06 09:46:42.327 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:46:42.421 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:46:44.049 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:46:44.088 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:46:44.120 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:46:44.123 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:46:44.142 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin/server;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/lib/amd64;D:\DevelopmentEnvironment\oracleClient\oracleClient64\product\11.2.0\client_1\bin;D:\DevelopmentEnvironment\oracleClient\oracleClient32\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;"D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\jre\bin";D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\bin;D:\DevelopmentEnvironment\openVpn\install\OpenVPN\bin;D:\DevelopmentEnvironment\slik\install\bin;D:\DevelopmentEnvironment\tortoiseSVN\install\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\DevelopmentEnvironment\nodeJs\install\;D:\DevelopmentEnvironment\python3.7\install\Scripts\;D:\DevelopmentEnvironment\python3.7\install\;C:\Users\10271\AppData\Local\Microsoft\WindowsApps;C:\Users\10271\AppData\Roaming\npm;C:\Users\10271\Desktop;;.]
+2019-03-06 09:46:44.704 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:46:44.705 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5846 ms
+2019-03-06 09:46:45.180 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2019-03-06 09:46:45.833 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:46:45.890 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-03-06 09:46:46.106 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:46:46.602 - INFO  [  restartedMain] o.h.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 09:46:46.609 - INFO  [  restartedMain] o.h.c.Environment              : HHH000206: hibernate.properties not found
+2019-03-06 09:46:47.268 - INFO  [  restartedMain] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 09:46:47.591 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:46:48.213 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:46:48.214 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:46:48.216 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:46:48.216 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:46:48.697 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:46:50.251 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:46:50.327 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:46:51.073 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:46:51.157 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:46:51.292 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:46:51.334 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 14.648 seconds (JVM running for 21.828)
+2019-03-06 09:48:02.301 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 09:48:02.302 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 09:48:02.316 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 14 ms
+2019-03-06 09:48:03.298 - INFO  [io-19001-exec-1] i.l.c.EpollProvider            : Starting without optional epoll library
+2019-03-06 09:48:03.305 - INFO  [io-19001-exec-1] i.l.c.KqueueProvider           : Starting without optional kqueue library
+2019-03-06 09:52:34.325 - INFO  [       Thread-9] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:52:35.454 - INFO  [       Thread-9] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:52:35.460 - INFO  [       Thread-9] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2019-03-06 09:52:35.949 - INFO  [       Thread-9] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2019-03-06 09:52:37.255 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:52:37.256 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:52:38.192 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:52:38.193 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:52:38.204 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-03-06 09:52:38.214 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:52:38.214 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:52:38.218 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 09:52:38.389 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:52:38.394 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:52:38.591 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:52:38.593 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:52:38.593 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:52:38.594 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:52:38.638 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:52:38.638 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1371 ms
+2019-03-06 09:52:38.741 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Starting...
+2019-03-06 09:52:39.169 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-2 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:52:39.210 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Start completed.
+2019-03-06 09:52:39.222 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:52:39.242 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:52:39.622 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:52:39.622 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:52:39.623 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:52:39.623 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:52:39.654 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:52:39.949 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:52:39.961 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:52:40.160 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:52:40.187 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:52:40.197 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:52:40.218 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.055 seconds (JVM running for 370.714)
+2019-03-06 09:52:40.244 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:52:45.437 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 09:52:45.438 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 09:52:45.448 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 9 ms
+2019-03-06 09:52:58.004 - INFO  [      Thread-13] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:52:59.117 - INFO  [      Thread-13] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:52:59.119 - INFO  [      Thread-13] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown initiated...
+2019-03-06 09:52:59.619 - INFO  [      Thread-13] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown completed.
+2019-03-06 09:53:01.630 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:53:01.630 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:53:02.534 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:53:02.535 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:53:02.546 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-03-06 09:53:02.554 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:53:02.555 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:53:02.565 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-03-06 09:53:02.723 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:53:02.729 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:53:02.933 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:53:02.935 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:53:02.936 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:53:02.937 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:53:02.965 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:53:02.965 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1327 ms
+2019-03-06 09:53:03.038 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Starting...
+2019-03-06 09:53:03.418 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-3 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:53:03.459 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Start completed.
+2019-03-06 09:53:03.468 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:53:03.487 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:53:03.869 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:53:03.870 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:53:03.870 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:53:03.870 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:53:03.891 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:53:04.151 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:53:04.164 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:53:04.379 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:53:04.412 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:53:04.427 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:53:04.428 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.938 seconds (JVM running for 394.924)
+2019-03-06 09:53:04.432 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:53:20.906 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 09:53:20.907 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 09:53:20.919 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 12 ms
+2019-03-06 09:55:09.757 - INFO  [      Thread-20] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:10.872 - INFO  [      Thread-20] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:10.876 - INFO  [      Thread-20] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown initiated...
+2019-03-06 09:55:11.403 - INFO  [      Thread-20] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown completed.
+2019-03-06 09:55:12.692 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:55:12.693 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:55:13.641 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:13.641 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:13.653 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-03-06 09:55:13.663 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:13.663 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:13.668 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 09:55:13.838 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:13.858 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:14.250 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:55:14.252 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:14.253 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:55:14.253 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:55:14.285 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:55:14.285 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
+2019-03-06 09:55:14.415 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Starting...
+2019-03-06 09:55:14.825 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-4 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:55:14.865 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Start completed.
+2019-03-06 09:55:14.882 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:55:14.907 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:55:15.375 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:15.376 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:15.376 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:15.377 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:15.458 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:15.829 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:15.846 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:55:16.051 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:55:16.075 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:16.094 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:55:16.097 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.515 seconds (JVM running for 526.594)
+2019-03-06 09:55:16.101 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:55:22.625 - INFO  [      Thread-27] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:22.630 - INFO  [      Thread-27] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:22.635 - INFO  [      Thread-27] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown initiated...
+2019-03-06 09:55:23.179 - INFO  [      Thread-27] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown completed.
+2019-03-06 09:55:24.331 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:55:24.332 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:55:25.989 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:25.991 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:26.008 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-03-06 09:55:26.020 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:26.021 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:26.032 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-03-06 09:55:26.178 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:26.182 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:26.385 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:55:26.386 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:26.386 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:55:26.387 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:55:26.415 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:55:26.415 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2077 ms
+2019-03-06 09:55:26.567 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Starting...
+2019-03-06 09:55:26.978 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-5 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:55:27.018 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Start completed.
+2019-03-06 09:55:27.031 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:55:27.059 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:55:27.440 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:27.441 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:27.442 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:27.443 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:27.487 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:28.065 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:28.076 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:55:28.244 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:55:28.271 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:28.283 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:55:28.284 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 4.051 seconds (JVM running for 538.781)
+2019-03-06 09:55:28.289 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:55:40.942 - INFO  [      Thread-35] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:40.947 - INFO  [      Thread-35] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:40.949 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-5 - Shutdown initiated...
+2019-03-06 09:55:41.552 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-5 - Shutdown completed.
+2019-03-06 09:55:43.232 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:55:43.233 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:55:44.249 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:44.250 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:44.259 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-03-06 09:55:44.267 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:55:44.267 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:55:44.271 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 09:55:44.386 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:44.390 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:55:44.557 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:55:44.558 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:44.558 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:55:44.559 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:55:44.586 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:55:44.586 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1346 ms
+2019-03-06 09:55:44.656 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-6 - Starting...
+2019-03-06 09:55:45.091 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-6 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:55:45.143 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-6 - Start completed.
+2019-03-06 09:55:45.153 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:55:45.169 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:55:45.542 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:45.542 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:55:45.542 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:45.543 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:55:45.565 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:55:45.884 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:55:45.908 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:55:46.202 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:55:46.252 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:55:46.273 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:55:46.274 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.144 seconds (JVM running for 556.77)
+2019-03-06 09:55:46.282 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:56:04.322 - INFO  [      Thread-42] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:04.329 - INFO  [      Thread-42] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:04.333 - INFO  [      Thread-42] c.z.h.HikariDataSource         : HikariPool-6 - Shutdown initiated...
+2019-03-06 09:56:04.846 - INFO  [      Thread-42] c.z.h.HikariDataSource         : HikariPool-6 - Shutdown completed.
+2019-03-06 09:56:06.301 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:56:06.301 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:56:07.376 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:07.376 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:07.393 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-03-06 09:56:07.401 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:07.401 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:07.406 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 09:56:07.534 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:07.541 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:07.744 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:56:07.746 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:07.747 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:56:07.748 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:56:07.776 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:56:07.776 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1467 ms
+2019-03-06 09:56:07.896 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-7 - Starting...
+2019-03-06 09:56:08.283 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-7 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:56:08.324 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-7 - Start completed.
+2019-03-06 09:56:08.333 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:56:08.350 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:56:08.720 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:08.721 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:08.721 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:08.721 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:08.740 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:08.973 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:08.984 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:56:09.189 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:56:09.243 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:09.266 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:56:09.267 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.064 seconds (JVM running for 579.764)
+2019-03-06 09:56:09.272 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:56:19.003 - INFO  [      Thread-50] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:19.006 - INFO  [      Thread-50] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:19.009 - INFO  [      Thread-50] c.z.h.HikariDataSource         : HikariPool-7 - Shutdown initiated...
+2019-03-06 09:56:19.542 - INFO  [      Thread-50] c.z.h.HikariDataSource         : HikariPool-7 - Shutdown completed.
+2019-03-06 09:56:21.067 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:56:21.067 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:56:22.396 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:22.396 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:22.424 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2019-03-06 09:56:22.437 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:22.438 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:22.443 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-03-06 09:56:22.828 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:22.864 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:23.191 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:56:23.192 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:23.192 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:56:23.193 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:56:23.219 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:56:23.219 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2145 ms
+2019-03-06 09:56:23.311 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-8 - Starting...
+2019-03-06 09:56:23.707 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-8 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:56:23.751 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-8 - Start completed.
+2019-03-06 09:56:23.762 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:56:23.789 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:56:24.164 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:24.164 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:24.165 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:24.165 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:24.240 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:24.507 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:24.518 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:56:24.683 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:56:24.708 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:24.717 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:56:24.718 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.754 seconds (JVM running for 595.215)
+2019-03-06 09:56:24.724 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:56:40.622 - INFO  [      Thread-57] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:40.625 - INFO  [      Thread-57] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:40.635 - INFO  [      Thread-57] c.z.h.HikariDataSource         : HikariPool-8 - Shutdown initiated...
+2019-03-06 09:56:41.150 - INFO  [      Thread-57] c.z.h.HikariDataSource         : HikariPool-8 - Shutdown completed.
+2019-03-06 09:56:42.819 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:56:42.820 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:56:43.810 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:43.811 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:43.831 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-03-06 09:56:43.839 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:43.839 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:43.843 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 09:56:43.960 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:43.963 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:44.131 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:56:44.132 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:44.133 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:56:44.133 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:56:44.159 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:56:44.160 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1332 ms
+2019-03-06 09:56:44.244 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-9 - Starting...
+2019-03-06 09:56:44.626 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-9 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:56:44.689 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-9 - Start completed.
+2019-03-06 09:56:44.716 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:56:44.785 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:56:45.151 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:45.152 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:45.152 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:45.153 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:45.181 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:45.451 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:45.463 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:56:45.631 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:56:45.657 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:45.665 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:56:45.666 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.966 seconds (JVM running for 616.163)
+2019-03-06 09:56:45.670 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:56:53.273 - INFO  [      Thread-64] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:53.275 - INFO  [      Thread-64] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:53.318 - INFO  [      Thread-64] c.z.h.HikariDataSource         : HikariPool-9 - Shutdown initiated...
+2019-03-06 09:56:53.851 - INFO  [      Thread-64] c.z.h.HikariDataSource         : HikariPool-9 - Shutdown completed.
+2019-03-06 09:56:55.163 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:56:55.164 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:56:56.030 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:56.031 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:56.049 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-03-06 09:56:56.058 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:56:56.058 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:56:56.064 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 09:56:56.189 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:56.194 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:56:56.374 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:56:56.376 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:56.376 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:56:56.377 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:56:56.406 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:56:56.406 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
+2019-03-06 09:56:56.477 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-10 - Starting...
+2019-03-06 09:56:56.931 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-10 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:56:56.990 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-10 - Start completed.
+2019-03-06 09:56:57.022 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:56:57.059 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:56:57.419 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:57.419 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:56:57.420 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:57.420 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:56:57.442 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:56:57.710 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:56:57.721 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:56:57.913 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:56:57.940 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:56:57.952 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:56:57.953 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.885 seconds (JVM running for 628.45)
+2019-03-06 09:56:57.957 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:57:06.617 - INFO  [      Thread-71] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:57:06.619 - INFO  [      Thread-71] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:57:06.623 - INFO  [      Thread-71] c.z.h.HikariDataSource         : HikariPool-10 - Shutdown initiated...
+2019-03-06 09:57:07.270 - INFO  [      Thread-71] c.z.h.HikariDataSource         : HikariPool-10 - Shutdown completed.
+2019-03-06 09:57:09.181 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:57:09.181 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:57:10.004 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:57:10.005 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:57:10.022 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-03-06 09:57:10.029 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:57:10.030 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:57:10.033 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 09:57:10.147 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:57:10.151 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:57:10.319 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:57:10.320 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:57:10.320 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:57:10.321 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:57:10.346 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:57:10.346 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1157 ms
+2019-03-06 09:57:10.414 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-11 - Starting...
+2019-03-06 09:57:10.850 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-11 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:57:10.895 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-11 - Start completed.
+2019-03-06 09:57:10.909 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:57:10.930 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:57:11.331 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:57:11.331 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:57:11.332 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:57:11.332 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:57:11.354 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:57:11.361 - WARN  [  restartedMain] c.s.AbstractApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfig' defined in file [D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes\org\wisdom\pms\bp\api\config\CorsConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.wisdom.pms.bp.api.config.CorsConfig$$EnhancerBySpringCGLIB$$21d3af29]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Implicit super constructor WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter() is undefined for default constructor. Must define an explicit constructor
+
+2019-03-06 09:57:11.361 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:57:11.362 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-11 - Shutdown initiated...
+2019-03-06 09:57:11.461 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-11 - Shutdown completed.
+2019-03-06 09:57:11.462 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Stopping service [Tomcat]
+2019-03-06 09:57:11.482 - INFO  [  restartedMain] valuationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-03-06 09:57:33.575 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 09:57:33.576 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 09:57:34.453 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:57:34.453 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:57:34.467 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-03-06 09:57:34.475 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 09:57:34.475 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:57:34.479 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 09:57:34.621 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:57:34.624 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 09:57:34.792 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 09:57:34.794 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:57:34.794 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 09:57:34.794 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 09:57:34.823 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 09:57:34.823 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1239 ms
+2019-03-06 09:57:34.890 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-12 - Starting...
+2019-03-06 09:57:35.405 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-12 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 09:57:35.452 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-12 - Start completed.
+2019-03-06 09:57:35.463 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 09:57:35.479 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 09:57:35.847 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:57:35.847 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 09:57:35.848 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:57:35.848 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 09:57:35.867 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:57:36.102 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 09:57:36.122 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 09:57:36.277 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 09:57:36.303 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 09:57:36.315 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 09:57:36.316 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.83 seconds (JVM running for 666.813)
+2019-03-06 09:57:36.323 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 09:59:18.096 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 09:59:18.097 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 09:59:18.110 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 13 ms
+2019-03-06 11:17:36.222 - INFO  [      Thread-78] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 11:17:37.335 - INFO  [      Thread-78] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 11:17:37.339 - INFO  [      Thread-78] c.z.h.HikariDataSource         : HikariPool-12 - Shutdown initiated...
+2019-03-06 11:17:37.847 - INFO  [      Thread-78] c.z.h.HikariDataSource         : HikariPool-12 - Shutdown completed.
+2019-03-06 11:17:39.260 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8232 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 11:17:39.260 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 11:17:40.301 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 11:17:40.301 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 11:17:40.315 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-03-06 11:17:40.324 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 11:17:40.324 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 11:17:40.330 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-03-06 11:17:40.495 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccfd5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 11:17:40.500 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$d99e4671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 11:17:40.736 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 11:17:40.738 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 11:17:40.738 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 11:17:40.739 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 11:17:40.772 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 11:17:40.772 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1501 ms
+2019-03-06 11:17:40.864 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-13 - Starting...
+2019-03-06 11:17:41.306 - INFO  [  restartedMain] c.z.h.p.PoolBase               : HikariPool-13 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-03-06 11:17:41.348 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-13 - Start completed.
+2019-03-06 11:17:41.358 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 11:17:41.375 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-03-06 11:17:41.754 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 11:17:41.755 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@31e12e30
+2019-03-06 11:17:41.755 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 11:17:41.755 - INFO  [  restartedMain] o.h.t.BasicTypeRegistry        : HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7d43dfd7
+2019-03-06 11:17:41.778 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 11:17:42.039 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 11:17:42.050 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 11:17:42.236 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 11:17:42.270 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 11:17:42.282 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 11:17:42.284 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.166 seconds (JVM running for 5472.781)
+2019-03-06 11:17:42.298 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 11:22:43.309 - INFO  [n(88)-127.0.0.1] gistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-03-06 11:22:43.314 - INFO  [n(88)-127.0.0.1] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 11:22:43.318 - INFO  [n(88)-127.0.0.1] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 11:22:43.321 - INFO  [n(88)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-13 - Shutdown initiated...
+2019-03-06 11:22:43.865 - INFO  [n(88)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-13 - Shutdown completed.
+2019-03-06 11:27:56.431 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 11:27:56.448 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 11:27:56.634 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-06 11:27:56.635 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-06 11:27:58.890 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 11:27:58.895 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 11:27:58.943 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-03-06 11:27:58.983 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 11:27:58.990 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 11:27:59.016 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 11:27:59.880 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 11:27:59.949 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 11:28:01.037 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 11:28:01.080 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 11:28:01.097 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 11:28:01.099 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 11:28:01.112 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin/server;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/lib/amd64;D:\DevelopmentEnvironment\oracleClient\oracleClient64\product\11.2.0\client_1\bin;D:\DevelopmentEnvironment\oracleClient\oracleClient32\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;"D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\jre\bin";D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\bin;D:\DevelopmentEnvironment\openVpn\install\OpenVPN\bin;D:\DevelopmentEnvironment\slik\install\bin;D:\DevelopmentEnvironment\tortoiseSVN\install\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\DevelopmentEnvironment\nodeJs\install\;D:\DevelopmentEnvironment\python3.7\install\Scripts\;D:\DevelopmentEnvironment\python3.7\install\;C:\Users\10271\AppData\Local\Microsoft\WindowsApps;C:\Users\10271\AppData\Roaming\npm;C:\Users\10271\Desktop;;.]
+2019-03-06 11:28:01.455 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 11:28:01.455 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4820 ms
+2019-03-06 11:28:01.811 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2019-03-06 11:28:02.414 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-03-06 11:28:02.512 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 11:28:02.784 - INFO  [  restartedMain] o.h.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 11:28:02.790 - INFO  [  restartedMain] o.h.c.Environment              : HHH000206: hibernate.properties not found
+2019-03-06 11:28:03.106 - INFO  [  restartedMain] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 11:28:03.423 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 11:28:03.865 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 11:28:05.510 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 11:28:05.578 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 11:28:06.101 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 11:28:06.160 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 11:28:06.227 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 11:28:06.234 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 10.55 seconds (JVM running for 13.616)
+2019-03-06 11:29:07.794 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 11:29:07.795 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 11:29:07.812 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 15 ms
+2019-03-06 14:19:17.679 - INFO  [       Thread-6] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:17.740 - INFO  [       Thread-6] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:17.753 - INFO  [       Thread-6] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2019-03-06 14:19:17.766 - INFO  [       Thread-6] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2019-03-06 14:19:19.261 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:19:19.262 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:19:20.502 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:20.503 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:20.527 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2019-03-06 14:19:20.542 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:20.542 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:20.548 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-03-06 14:19:20.760 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:20.768 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:21.027 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:19:21.028 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:21.029 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:19:21.029 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:19:21.066 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:19:21.066 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1794 ms
+2019-03-06 14:19:21.180 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Starting...
+2019-03-06 14:19:21.217 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Start completed.
+2019-03-06 14:19:21.237 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:19:21.262 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:19:21.312 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:21.789 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:21.805 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:19:22.058 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:19:22.092 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:22.101 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:19:22.102 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.007 seconds (JVM running for 10292.287)
+2019-03-06 14:19:22.108 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:19:30.703 - INFO  [      Thread-11] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:30.709 - INFO  [      Thread-11] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:30.714 - INFO  [      Thread-11] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown initiated...
+2019-03-06 14:19:30.739 - INFO  [      Thread-11] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown completed.
+2019-03-06 14:19:32.076 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:19:32.076 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:19:32.947 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:32.947 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:32.960 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-03-06 14:19:32.969 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:32.969 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:32.973 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 14:19:33.107 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:33.112 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:33.290 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:19:33.291 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:33.292 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:19:33.293 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:19:33.319 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:19:33.319 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1235 ms
+2019-03-06 14:19:33.390 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Starting...
+2019-03-06 14:19:33.409 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Start completed.
+2019-03-06 14:19:33.419 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:19:33.438 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:19:33.463 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:33.760 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:33.772 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:19:33.939 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:19:33.968 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:33.979 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:19:33.982 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.03 seconds (JVM running for 10304.166)
+2019-03-06 14:19:33.990 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:19:44.590 - INFO  [      Thread-17] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:44.597 - INFO  [      Thread-17] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:44.602 - INFO  [      Thread-17] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown initiated...
+2019-03-06 14:19:44.677 - INFO  [      Thread-17] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown completed.
+2019-03-06 14:19:46.217 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:19:46.219 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:19:47.846 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:47.846 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:47.863 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-03-06 14:19:47.877 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:19:47.877 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:19:47.882 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 14:19:48.044 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:48.050 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:19:48.310 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:19:48.311 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:48.312 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:19:48.313 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:19:48.387 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:19:48.388 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2111 ms
+2019-03-06 14:19:48.561 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Starting...
+2019-03-06 14:19:48.596 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Start completed.
+2019-03-06 14:19:48.613 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:19:48.646 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:19:48.700 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:19:49.535 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:19:49.554 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:19:49.854 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:19:49.906 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:19:49.918 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:19:49.921 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 3.819 seconds (JVM running for 10320.105)
+2019-03-06 14:19:49.928 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:20:15.029 - INFO  [      Thread-23] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:20:15.034 - INFO  [      Thread-23] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:20:15.037 - INFO  [      Thread-23] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown initiated...
+2019-03-06 14:20:15.075 - INFO  [      Thread-23] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown completed.
+2019-03-06 14:20:16.542 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:20:16.542 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:20:17.625 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:20:17.625 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:20:17.640 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-03-06 14:20:17.647 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:20:17.648 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:20:17.652 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 14:20:17.780 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:20:17.785 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:20:17.949 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:20:17.951 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:20:17.951 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:20:17.952 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:20:17.977 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:20:17.978 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1428 ms
+2019-03-06 14:20:18.109 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Starting...
+2019-03-06 14:20:18.147 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Start completed.
+2019-03-06 14:20:18.160 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:20:18.185 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:20:18.234 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:20:18.795 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:20:18.806 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:20:18.967 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:20:19.001 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:20:19.013 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:20:19.015 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.622 seconds (JVM running for 10349.199)
+2019-03-06 14:20:19.019 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:20:25.520 - INFO  [      Thread-29] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:20:25.526 - INFO  [      Thread-29] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:20:25.529 - INFO  [      Thread-29] c.z.h.HikariDataSource         : HikariPool-5 - Shutdown initiated...
+2019-03-06 14:20:25.556 - INFO  [      Thread-29] c.z.h.HikariDataSource         : HikariPool-5 - Shutdown completed.
+2019-03-06 14:20:26.868 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:20:26.869 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:20:27.720 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:20:27.721 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:20:27.734 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-03-06 14:20:27.741 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:20:27.741 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:20:27.745 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 14:20:27.875 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:20:27.879 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:20:28.052 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:20:28.053 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:20:28.054 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:20:28.054 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:20:28.083 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:20:28.084 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2019-03-06 14:20:28.156 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-6 - Starting...
+2019-03-06 14:20:28.185 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-6 - Start completed.
+2019-03-06 14:20:28.193 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:20:28.215 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:20:28.241 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:20:28.576 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:20:28.588 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:20:28.753 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:20:28.778 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:20:28.787 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:20:28.788 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.033 seconds (JVM running for 10358.972)
+2019-03-06 14:20:28.794 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:20:38.866 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 14:20:38.866 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 14:20:38.877 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 11 ms
+2019-03-06 14:20:39.332 - INFO  [io-19001-exec-1] i.l.c.EpollProvider            : Starting without optional epoll library
+2019-03-06 14:20:39.343 - INFO  [io-19001-exec-1] i.l.c.KqueueProvider           : Starting without optional kqueue library
+2019-03-06 14:21:40.730 - INFO  [      Thread-35] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:21:41.850 - INFO  [      Thread-35] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:21:41.853 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-6 - Shutdown initiated...
+2019-03-06 14:21:41.872 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-6 - Shutdown completed.
+2019-03-06 14:21:43.677 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:21:43.677 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:21:45.070 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:21:45.070 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:21:45.082 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-03-06 14:21:45.091 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:21:45.091 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:21:45.094 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 14:21:45.221 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:21:45.224 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:21:45.402 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:21:45.403 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:21:45.403 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:21:45.404 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:21:45.430 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:21:45.430 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1691 ms
+2019-03-06 14:21:45.506 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-7 - Starting...
+2019-03-06 14:21:45.531 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-7 - Start completed.
+2019-03-06 14:21:45.539 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:21:45.556 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:21:45.589 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:21:45.981 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:21:45.995 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:21:46.226 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:21:46.253 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:21:46.263 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:21:46.264 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.735 seconds (JVM running for 10436.449)
+2019-03-06 14:21:46.268 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:21:53.785 - INFO  [      Thread-41] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:21:53.789 - INFO  [      Thread-41] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:21:53.800 - INFO  [      Thread-41] c.z.h.HikariDataSource         : HikariPool-7 - Shutdown initiated...
+2019-03-06 14:21:53.824 - INFO  [      Thread-41] c.z.h.HikariDataSource         : HikariPool-7 - Shutdown completed.
+2019-03-06 14:21:55.272 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:21:55.273 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:21:56.129 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:21:56.130 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:21:56.141 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-03-06 14:21:56.149 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:21:56.150 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:21:56.154 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-03-06 14:21:56.291 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:21:56.294 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:21:56.457 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:21:56.458 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:21:56.459 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:21:56.459 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:21:56.485 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:21:56.485 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2019-03-06 14:21:56.556 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-8 - Starting...
+2019-03-06 14:21:56.590 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-8 - Start completed.
+2019-03-06 14:21:56.604 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:21:56.623 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:21:56.645 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:21:56.973 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:21:56.986 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:21:57.170 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:21:57.193 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:21:57.206 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:21:57.208 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.044 seconds (JVM running for 10447.392)
+2019-03-06 14:21:57.213 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:22:05.009 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 14:22:05.010 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 14:22:05.023 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 13 ms
+2019-03-06 14:23:01.857 - INFO  [      Thread-47] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:23:02.969 - INFO  [      Thread-47] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:23:02.972 - INFO  [      Thread-47] c.z.h.HikariDataSource         : HikariPool-8 - Shutdown initiated...
+2019-03-06 14:23:02.992 - INFO  [      Thread-47] c.z.h.HikariDataSource         : HikariPool-8 - Shutdown completed.
+2019-03-06 14:23:04.351 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11300 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 14:23:04.352 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 14:23:05.230 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:23:05.230 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:23:05.243 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-03-06 14:23:05.252 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 14:23:05.252 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 14:23:05.256 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-03-06 14:23:05.381 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57c530a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:23:05.387 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$64661890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 14:23:05.569 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 14:23:05.570 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:23:05.571 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 14:23:05.571 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 14:23:05.598 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 14:23:05.598 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1238 ms
+2019-03-06 14:23:05.672 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-9 - Starting...
+2019-03-06 14:23:05.696 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-9 - Start completed.
+2019-03-06 14:23:05.706 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 14:23:05.722 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 14:23:05.748 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:23:06.101 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:23:06.115 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 14:23:06.283 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 14:23:06.310 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 14:23:06.318 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 14:23:06.320 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 2.078 seconds (JVM running for 10516.504)
+2019-03-06 14:23:06.326 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-06 14:23:08.412 - INFO  [(178)-127.0.0.1] gistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-03-06 14:23:08.415 - INFO  [(178)-127.0.0.1] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 14:23:08.417 - INFO  [(178)-127.0.0.1] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 14:23:08.423 - INFO  [(178)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-9 - Shutdown initiated...
+2019-03-06 14:23:08.446 - INFO  [(178)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-9 - Shutdown completed.
+2019-03-06 15:15:17.955 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 10348 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 15:15:17.970 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 15:15:18.147 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-06 15:15:18.148 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-06 15:15:19.985 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 15:15:19.988 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 15:15:20.033 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-03-06 15:15:20.068 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 15:15:20.070 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 15:15:20.097 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-03-06 15:15:21.002 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$645385f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 15:15:21.069 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$70f46de8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 15:15:22.080 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 15:15:22.110 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 15:15:22.137 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 15:15:22.139 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 15:15:22.154 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin/server;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/lib/amd64;D:\DevelopmentEnvironment\oracleClient\oracleClient64\product\11.2.0\client_1\bin;D:\DevelopmentEnvironment\oracleClient\oracleClient32\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;"D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\jre\bin";D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\bin;D:\DevelopmentEnvironment\openVpn\install\OpenVPN\bin;D:\DevelopmentEnvironment\slik\install\bin;D:\DevelopmentEnvironment\tortoiseSVN\install\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\DevelopmentEnvironment\nodeJs\install\;D:\DevelopmentEnvironment\python3.7\install\Scripts\;D:\DevelopmentEnvironment\python3.7\install\;C:\Users\10271\AppData\Local\Microsoft\WindowsApps;C:\Users\10271\AppData\Roaming\npm;C:\Users\10271\Desktop;;.]
+2019-03-06 15:15:22.501 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 15:15:22.502 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4354 ms
+2019-03-06 15:15:22.798 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2019-03-06 15:15:23.335 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-03-06 15:15:23.423 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 15:15:23.771 - INFO  [  restartedMain] o.h.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 15:15:23.775 - INFO  [  restartedMain] o.h.c.Environment              : HHH000206: hibernate.properties not found
+2019-03-06 15:15:24.092 - INFO  [  restartedMain] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 15:15:24.356 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 15:15:24.744 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 15:15:26.099 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 15:15:26.166 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 15:15:26.694 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 15:15:26.751 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 15:15:26.836 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 15:15:26.843 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 9.61 seconds (JVM running for 12.944)
+2019-03-06 15:15:38.824 - INFO  [io-19001-exec-2] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 15:15:38.825 - INFO  [io-19001-exec-2] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 15:15:38.844 - INFO  [io-19001-exec-2] o.s.w.s.FrameworkServlet       : Completed initialization in 19 ms
+2019-03-06 15:15:39.620 - INFO  [io-19001-exec-2] i.l.c.EpollProvider            : Starting without optional epoll library
+2019-03-06 15:15:39.626 - INFO  [io-19001-exec-2] i.l.c.KqueueProvider           : Starting without optional kqueue library
+2019-03-06 15:22:00.575 - INFO  [on(2)-127.0.0.1] gistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-03-06 15:22:00.693 - INFO  [on(2)-127.0.0.1] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 15:22:01.947 - INFO  [on(2)-127.0.0.1] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 15:22:01.979 - INFO  [on(2)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2019-03-06 15:22:02.022 - INFO  [on(2)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2019-03-06 17:55:59.193 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 7004 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 17:55:59.206 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 17:57:01.737 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 15184 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 17:57:01.750 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:02:39.902 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 4036 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:02:39.914 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:12:17.186 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 1532 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:12:17.202 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:13:55.273 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8704 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:13:55.287 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:14:17.530 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 8948 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:14:17.545 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:15:31.456 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 11504 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:15:31.469 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:15:31.645 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-06 18:15:31.645 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-06 18:15:33.442 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 18:15:33.446 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 18:15:33.489 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-03-06 18:15:33.519 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 18:15:33.521 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 18:15:33.546 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-03-06 18:15:34.246 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6e1e188] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 18:15:34.459 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$1382c977] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 18:15:35.440 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 18:15:35.467 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 18:15:35.482 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 18:15:35.484 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 18:15:35.499 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin/server;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/lib/amd64;D:\DevelopmentEnvironment\oracleClient\oracleClient64\product\11.2.0\client_1\bin;D:\DevelopmentEnvironment\oracleClient\oracleClient32\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;"D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\jre\bin";D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\bin;D:\DevelopmentEnvironment\openVpn\install\OpenVPN\bin;D:\DevelopmentEnvironment\slik\install\bin;D:\DevelopmentEnvironment\tortoiseSVN\install\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\DevelopmentEnvironment\nodeJs\install\;D:\DevelopmentEnvironment\python3.7\install\Scripts\;D:\DevelopmentEnvironment\python3.7\install\;C:\Users\10271\AppData\Local\Microsoft\WindowsApps;C:\Users\10271\AppData\Roaming\npm;C:\Users\10271\Desktop;;.]
+2019-03-06 18:15:35.695 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 18:15:35.697 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4051 ms
+2019-03-06 18:15:36.062 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2019-03-06 18:15:36.712 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-03-06 18:15:36.816 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 18:15:37.100 - INFO  [  restartedMain] o.h.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 18:15:37.106 - INFO  [  restartedMain] o.h.c.Environment              : HHH000206: hibernate.properties not found
+2019-03-06 18:15:37.406 - INFO  [  restartedMain] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 18:15:37.700 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 18:15:38.078 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 18:15:39.816 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 18:15:39.910 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 18:15:40.862 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 18:15:40.917 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 18:15:40.992 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 18:15:40.998 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 10.276 seconds (JVM running for 13.551)
+2019-03-06 18:15:43.534 - INFO  [on(2)-127.0.0.1] gistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-03-06 18:15:43.543 - INFO  [on(2)-127.0.0.1] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-06 18:15:43.580 - INFO  [on(2)-127.0.0.1] stractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 18:15:43.586 - INFO  [on(2)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2019-03-06 18:15:43.613 - INFO  [on(2)-127.0.0.1] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2019-03-06 18:17:39.778 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting Application on DESKTOP-M51EEBH with PID 14136 (D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\target\classes started by 10271 in D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api)
+2019-03-06 18:17:39.819 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-03-06 18:17:40.002 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-06 18:17:40.002 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-06 18:17:41.846 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 18:17:41.850 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 18:17:41.896 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-03-06 18:17:41.927 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-06 18:17:41.930 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 18:17:41.953 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-03-06 18:17:42.699 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d58630a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 18:17:42.913 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'redisConfig' of type [org.wisdom.pms.bp.api.config.RedisConfig$$EnhancerBySpringCGLIB$$19f94af9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-06 18:17:43.827 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 19001 (http)
+2019-03-06 18:17:43.854 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-19001"]
+2019-03-06 18:17:43.868 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-03-06 18:17:43.870 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-06 18:17:43.883 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin/server;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/bin;D:/DevelopmentEnvironment/jdk/jdk1.8/jre/lib/amd64;D:\DevelopmentEnvironment\oracleClient\oracleClient64\product\11.2.0\client_1\bin;D:\DevelopmentEnvironment\oracleClient\oracleClient32\product\11.2.0\client_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;"D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\bin;D:\DevelopmentEnvironment\jdk\jdk1.8\jdk\jre\bin";D:\DevelopmentEnvironment\mavenRepertory\apache-maven-3.3.9\bin;D:\DevelopmentEnvironment\openVpn\install\OpenVPN\bin;D:\DevelopmentEnvironment\slik\install\bin;D:\DevelopmentEnvironment\tortoiseSVN\install\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\DevelopmentEnvironment\nodeJs\install\;D:\DevelopmentEnvironment\python3.7\install\Scripts\;D:\DevelopmentEnvironment\python3.7\install\;C:\Users\10271\AppData\Local\Microsoft\WindowsApps;C:\Users\10271\AppData\Roaming\npm;C:\Users\10271\Desktop;;.]
+2019-03-06 18:17:44.115 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-03-06 18:17:44.116 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4113 ms
+2019-03-06 18:17:44.470 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2019-03-06 18:17:45.023 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-03-06 18:17:45.130 - INFO  [  restartedMain] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-06 18:17:45.357 - INFO  [  restartedMain] o.h.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 18:17:45.362 - INFO  [  restartedMain] o.h.c.Environment              : HHH000206: hibernate.properties not found
+2019-03-06 18:17:45.717 - INFO  [  restartedMain] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 18:17:45.989 - INFO  [  restartedMain] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-06 18:17:46.389 - INFO  [  restartedMain] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 18:17:48.070 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-06 18:17:48.169 - WARN  [  restartedMain] uration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-06 18:17:49.172 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2019-03-06 18:17:49.227 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-19001"]
+2019-03-06 18:17:49.303 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 19001 (http) with context path ''
+2019-03-06 18:17:49.312 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started Application in 10.336 seconds (JVM running for 13.82)
+2019-03-06 18:18:48.679 - INFO  [io-19001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-06 18:18:48.681 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-03-06 18:18:48.722 - INFO  [io-19001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 41 ms
+2019-03-06 18:18:49.300 - INFO  [io-19001-exec-1] i.l.c.EpollProvider            : Starting without optional epoll library
+2019-03-06 18:18:49.309 - INFO  [io-19001-exec-1] i.l.c.KqueueProvider           : Starting without optional kqueue library

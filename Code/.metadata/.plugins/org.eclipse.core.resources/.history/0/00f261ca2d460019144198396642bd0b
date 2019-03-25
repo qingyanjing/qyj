@@ -1,0 +1,27 @@
+package springMvcTheory.demo.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import springMvcTheory.demo.service.IDemoService;
+import springMvcTheory.webmvc.annotation.HPController;
+import springMvcTheory.webmvc.annotation.HPRequestMapping;
+
+/** 
+* @author 作者：huangpeng E-mail: 
+* @date 创建时间：2019年3月14日 下午3:25:56 
+* @version 1.0 
+* @parameter  
+* @since  
+* @return  
+*/
+@HPController
+@HPRequestMapping("/demo")
+public class DemoAction {
+
+	private IDemoService demoService;
+	
+	public void query(HttpServletRequest res, HttpServletResponse req){
+		
+	}
+}

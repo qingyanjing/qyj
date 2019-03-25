@@ -1,0 +1,462 @@
+var xw_shishi_chart = echarts.init(document.getElementById('xw-shishi-chart'));
+var xw_jihua_chart = echarts.init(document.getElementById('xw-jihua-chart'));
+var xw_shishi_chart_option = planPhaseOption;
+var planOption = JSON.parse(JSON.stringify(xw_shishi_chart_option))
+var rtTotal = 100;
+var initObj = {
+	rtScatsNum : 100,
+	planScatsNum : 100,
+	scatsContent : [ "A", "B", "C", "D" ],
+	planProportion : [ 29, 22, 23, 26 ],
+	index : 0
+}
+var eachartConf = {
+	baseColor : [ '#23929c', '#eca06d', '#239c56', '#dab135' ],
+	bgColor : '#778899',
+	baseData : {
+		value : 100,
+		name : ''
+	}
+}
+var baseColor=['#23929c', '#eca06d', '#239c56', '#dab135'];
+var rtcolor=[];
+var obj={value: 100, name: ''}
+var dataArr=[];
+var colorArr=[];
+var picFlg=false;//图片初始化标志位
+var virtualStatusData={
+    "statusCode": "200",
+    "type": "table",
+    "data": {
+        "siteId": "1315",
+        "updateTime": 1546668453000,
+        "isDwell": false,
+        "splitPlanId": "1",
+        "offsetPlanId": "4",
+        "controlModeId": "2",
+        "isLockSplitPlan": false,
+        "isLockOffsetPlan": false,
+        "elapsedTime": 9,
+        "currentPhase": "D",
+        "remainingTime": 3,
+        "subSystemId": "26",
+        "cycleTime": 205
+    }
+}
+var virtualPlanData={
+    siteId:"1315",
+    splitPlanId:"1",
+    phasecontent:"A,B,C,D",
+    plancontent:"29,22,23,26"
+}
+dataArr.push({value: initObj.rtScatsNum, name: ''});
+colorArr.push(eachartConf.bgColor);
+xw_shishi_chart_option.color=colorArr;
+xw_shishi_chart_option.series[0].data=dataArr;
+//加载echart
+xw_shishi_chart.setOption(xw_shishi_chart_option);
+xw_jihua_chart.setOption(planOption);
+//开启加载动画
+xw_shishi_chart_option.animation=true;
+//开始一秒钟自动增加一
+xw_shishi_chart_option.series[0].data.unshift({value: 1, name: initObj.scatsContent[initObj.index]+'相位'});
+xw_shishi_chart_option.color.unshift(eachartConf.baseColor[initObj.index]);
+var socketFlag=false;
+setInterval(function () {
+    var dataArr=xw_shishi_chart_option.series[0].data;
+    var colorArr=xw_shishi_chart_option.color;
+
+
+    //  data= [ A,B,bg]
+    if (socketFlag) {
+        dataArr[dataArr.length-2].value++;
+        dataArr[dataArr.length-1].value--;
+        if (dataArr[dataArr.length-1].value<=0){
+            dataArr[dataArr.length-1].value=0;
+        }
+        // xw_shishi_chart_option.color=colorArr;
+        // xw_shishi_chart_option.series[0].data=dataArr;
+
+        xw_shishi_chart.setOption(xw_shishi_chart_option);
+    }
+
+
+},1000)
+// 获取空白扇形区占比值
+function cutdownTotal(index) {
+    var value=initObj.rtScatsNum;
+    for (var i=0;i<=index;i++){
+        value-=(initObj.planProportion[i]*initObj.rtScatsNum*0.01).toFixed(2);
+    }
+    console.log("矫正后的空白区域值："+value.toFixed(2))
+    return value>=0? value.toFixed(2):0;
+}
+//
+function rtPieMsgHandler(data) {
+    // 测试注释
+    // initObj.rtScatsNum=data.cycleTime;
+    console.log("收到了消息：------------>"+JSON.stringify(data))
+    var scatsName=data.phase;
+    $("#currentScats").text(scatsName);
+    var dataArr=xw_shishi_chart_option.series[0].data;
+    var colorArr=xw_shishi_chart_option.color;
+    if (scatsName!=undefined){
+        var scatsContent=initObj.scatsContent;
+        console.log("index=" +initObj.index);
+        for(var i=0;i<scatsContent.length;i++){
+            if (scatsName==scatsContent[i]){
+                console.log("i="+i);
+                if (i==initObj.index+1){
+                    dataArr.splice(i,0,{value: 1, name: initObj.scatsContent[i]+'相位'});
+                    colorArr.splice(i,0,eachartConf.baseColor[i]);
+                    initObj.index=i;
+                    lockScatsPic(initObj.index);
+                }else if (i==0&&initObj.index==initObj.scatsContent.length-1){
+                    dataArr.splice(0,dataArr.length);
+                    colorArr.splice(0,colorArr.length);
+                    dataArr.push({value: 1, name: initObj.scatsContent[0]+'相位'})
+                    colorArr.push(eachartConf.baseColor[0]);
+                    dataArr.push({value: initObj.rtScatsNum, name: ''});
+                    colorArr.push(eachartConf.bgColor);
+                    initObj.index=0;
+                    lockScatsPic(initObj.index);
+                }
+                else{
+                    quickFix(i)
+                }
+
+
+            }
+        }
+    }
+}
+//页面加入时请求服务器和检查计划相位的内容
+function getPhaseBaseData(data) {
+//    setPlanEchart(virtualPlanData)
+     jQuery.ajax({
+         contentType : "application/x-www-form-urlencoded;charset=utf-8",
+         type : "GET",
+         url : contextPath + "/rbx/sa/trafficSituation/getScatsPlan.data?_=" + Math.random(),
+         data : data!=undefined||data!=null? data:{},
+         success : function (data)
+         {
+             if (data != null&&data.statusCode==200)
+             {
+            	 setPlanEchart(data.data.currentPhase);
+             }
+         },
+         error : function (XMLHttpRequest, textStatus, errorThrown)
+         {
+    
+         }
+     });
+}
+//页面加入时请求服务器和检查计划相位的内容
+function getPhaseRtData(id) {
+//    setPlanEchart(virtualPlanData)
+     jQuery.ajax({
+         contentType : "application/x-www-form-urlencoded;charset=utf-8",
+         type : "GET",
+         url : contextPath + "/rbx/sa/trafficSituation/getScatsState.data?_=" + Math.random(),
+         data : {
+        	 siteId:id
+         },
+         success : function (data)
+         {
+             if (data != null&&data.statusCode==200)
+             {
+            	 rtTableHandler(data.data);
+            	    positionFix(data.data);
+            	  
+            	    
+             }
+         },
+         error : function (XMLHttpRequest, textStatus, errorThrown)
+         {
+    
+         }
+     });
+}
+//修复数据出现延时情况
+function quickFix(index) {
+    if (index!=initObj.index+1){
+        //如果是最大相位数，从第一个相位重新开始
+        if (index==initObj.scatsContent.length-1){
+            dataArr.splice(0,dataArr.length);
+            colorArr.splice(0,colorArr.length);
+            dataArr.push({value: 1, name: initObj.scatsContent[0]+'相位'})
+            colorArr.push(eachartConf.baseColor[0]);
+            dataArr.push({value: initObj.rtScatsNum, name: ''});
+            colorArr.push(eachartConf.bgColor);
+            initObj.index=0;
+            lockScatsPic(initObj.index);
+        }else{//自动补充相位
+            dataArr.splice(0,dataArr.length);
+            colorArr.splice(0,colorArr.length);
+            for (var i=0;i<index;i++){
+                dataArr.push({value: initObj.rtScatsNum*initObj.planProportion[i]*0.01.toFixed(2), name: initObj.scatsContent[i]+'相位'});
+                colorArr.push(eachartConf.baseColor[i]);
+            }
+
+            dataArr.push({value: 1, name: initObj.scatsContent[index]+'相位'})
+            colorArr.push(eachartConf.baseColor[index]);
+            initObj.index=index;
+            dataArr.push({value: initObj.rtScatsNum, name: ''});
+            colorArr.push(eachartConf.bgColor);
+            dataArr[index+1].value=cutdownTotal(index-1);
+            lockScatsPic(initObj.index);
+        }
+        xw_shishi_chart_option.series[0].data=dataArr;
+        xw_shishi_chart_option.color=colorArr;
+
+    }
+}
+function getElapsedTime(index,planProportion) {
+    let count=0;
+    for (let i = 0; i < index; i++) {
+        count+=planProportion[i];
+    }
+    return count;
+}
+function positionFix(data) {
+    let  scatsContent=initObj.scatsContent;
+    for (var i = 0; i < scatsContent.length; i++) {
+            if (data.currentPhase==scatsContent[i]){
+                let  dataArr=[];
+                let colorArr=[];
+                let fullElapsedTime=(getElapsedTime(i,initObj.planProportion)*0.01*data.cycleTime).toFixed(2);//整个周期中已过去时长
+                let fullRemainingTime=data.cycleTime-fullElapsedTime-data.elapsedTime;//整个周期中未发生的相位时长
+                dataArr.push({value:fullElapsedTime,name:"已过去相位时长"});//当前相位之前的部分
+                dataArr.push({value:data.elapsedTime,name:data.currentPhase+"相位"});
+                dataArr.push({value:fullRemainingTime.toFixed(2),name:"剩余相位时长"});
+                colorArr=[eachartConf.bgColor,eachartConf.baseColor[i],eachartConf.bgColor];
+                initObj.index=i;
+                lockScatsPic(i);
+                xw_shishi_chart_option.series[0].data=dataArr;
+                xw_shishi_chart_option.color=colorArr;
+                xw_shishi_chart.setOption(xw_shishi_chart_option);
+            }
+    }
+}
+function judgeContolModel(id) {
+    var controls=["本地模式","灵控模式","主控模式","紧急模式","警用关闭","警用人工","警用全红","维护模式"];
+    return id>=8?"未知模式":controls[id];
+}
+function rtTableHandler(data) {
+    $("#planValue").text(data.cycleTime);
+    $("#realTimeValue").text(data.cycleTime);
+    console.log("基础数据："+JSON.stringify(data));
+    var dom="<tr>" +
+        "<th>绿信比方案号</th>" +
+        "<td>"+data.splitPlanId+(data.isLockSplitPlan? "(锁定)":"")+"</td>" +
+        "<th>相位差方案号</th>" +
+        "<td>"+data.offsetPlanId+(data.isLockOffsetPlan? "(锁定)":"")+"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<th>控制模式</th>" +
+        "<td>"+judgeContolModel(data.controlModeId)+"</td>" +
+        "<th>当前相位</th>" +
+        "<td id='currentScats'>"+data.currentPhase+(data.isDwell? "(锁定)":"")+"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<th>周期时长</th>" +
+        "<td>"+data.cycleTime+"</td>" +
+        "<th>子系统方案号</th>" +
+        "<td>"+data.subSystemId+"</td>" +
+        "</tr>";
+    $("#scatsTable").html(dom);
+    initObj.rtScatsNum=data.cycleTime;
+    initObj.planScatsNum=data.cycleTime;
+    //开始判断计划相位
+    if(data.splitPlanId!=initObj.planId){
+        getPhaseBaseData({splitPlanId:data.splitPlanId,siteId:data.siteId})//这个里面会更新饼图信息
+        initObj.planId=data.splitPlanId;
+    }
+}
+
+function setPlanEchart(planScats) {
+    var phasecontent=planScats.phasecontent.split(",");
+    var plancontent=planScats.plancontent.split(",").map(Number);
+    initObj.planProportion=plancontent;
+    initObj.scatsContent=phasecontent;
+    var dataArr=[];
+    for (var i=0;i<plancontent.length;i++){
+        var baseObj={ value: 120, name: '相位' };
+        baseObj.value=(plancontent[i]*initObj.planScatsNum*0.01).toFixed(2);
+        baseObj.name=phasecontent[i]+"相位";
+        dataArr.push(baseObj)
+    }
+    planOption.series[0].data=dataArr;
+    console.log(dataArr);
+    planOption.animation=true;
+    xw_jihua_chart.setOption(planOption);
+    if (!picFlg){
+        initScatsPic(phasecontent);//动态加载相位图片
+        picFlg=true;
+    }
+}
+var socket;
+function setSiteNO (id)
+{
+	console.log("获取到了Id:" + id);
+	scatsId = id;
+}
+var socket = null;
+function changeScats (id)
+{
+	if (socket != null && socket.readyState == WebSocket.OPEN)
+	{
+		socket.send("{\"scatsId\":\""+id+"\"}");
+	}
+	RoadId=id;
+}
+var RoadId="31010400001";
+function connectSocket (scatsId,crossId)
+{
+	RoadId=crossId;
+	if (!window.WebSocket)
+	{
+		window.WebSocket = window.MozWebSocket;
+	}
+	if (window.WebSocket)
+	{
+		if (socket != null || socket != undefined)
+		{
+			socket.close();
+		}
+		socket = new WebSocket(socketAdress + "?" + scatsId);
+		socket.onmessage = function (event)
+		{
+			var data = JSON.parse(event.data);
+			console.log("收到服务端发送的数据：" + data)
+			if (data.statusCode == 200)
+			{
+				if (data.type == "pie")
+				{
+					rtPieMsgHandler(data.data)
+				}
+				else if (data.type == "table")
+				{
+					rtTableHandler(data.data);
+				}
+			}
+		};
+		socket.onopen = function (event)
+		{
+			console.log("打开WebSoket 服务正常，浏览器支持WebSoket!");
+			socketFlag=true;
+		};
+		socket.onclose = function (event)
+		{
+			console.log("与服务器断开连接");
+			socketFlag=false;
+		};
+	}
+	else
+	{
+		alert("您的浏览器不支持WebSocket协议！");
+	}
+}
+function send (message)
+{
+	if (!window.WebSocket)
+	{
+		return;
+	}
+	if (socket.readyState == WebSocket.OPEN)
+	{
+		socket.send(message);
+	}
+	else
+	{
+		alert("WebSocket 连接没有建立成功！");
+	}
+}
+//var t = setInterval(function(){
+//    if (map!=undefined&&map!=null){
+//    	console.log("GIS加载出来了");
+//        lockScatsPic(initObj.index);
+//        clearInterval(t)
+//    }else{
+//    	 console.log("GIS还没加载出来");
+//    }
+//   
+//}, 1000);
+function lockScatsPic (id)
+{
+	$("#scatsPic li").each(function (index, dom)
+	{
+		console.log("索引：" + id);
+		if (id == index)
+		{
+			$(dom).addClass("active")
+		}
+		else
+		{
+			$(dom).removeClass("active");
+		}
+	});
+	var scatsName = initObj.scatsContent[id];
+	// msgMap.shiftStage("", "D");
+	if (map != undefined)
+	{
+		map.shiftStage(RoadId, scatsName);
+	
+	}else{
+		console.log("阻塞开始------>");
+		overseeGIS(function(result){
+			console.log("开始回调：RoadId="+RoadId+" --scatsName="+scatsName);
+			map.shiftStage(RoadId, scatsName)
+		});
+		console.log("阻塞结束------>");
+	}	
+}
+function overseeGIS(callback){
+	var t = setInterval(function(){
+	    if (map!=undefined&&map!=null){
+	    	console.log("GIS加载出来了");
+	    	callback();
+	        clearInterval(t)
+	    }else{
+	    	 console.log("GIS还没加载出来");
+	    }
+	   
+	}, 1000);
+}
+function initScatsPic (scatsContent)
+{
+	var indexArr = [];
+	for(var i = 0; i < scatsContent.length; i++)
+	{
+		if (scatsContent[i] == "A")
+		{
+			indexArr.push(0);
+		}
+		else if (scatsContent[i] == "B")
+		{
+			indexArr.push(1);
+		}
+		else if (scatsContent[i] == "C")
+		{
+			indexArr.push(2);
+		}
+		else if (scatsContent[i] == "D")
+		{
+			indexArr.push(3);
+		}
+	}
+	$("#scatsPic li").each(function (index, dom)
+	{
+		$(dom).hide();
+	});
+	$("#scatsPic li").each(function (index, dom)
+	{
+		for(var i = 0; i < indexArr.length; i++)
+		{
+			if (index == indexArr[i])
+			{
+				$(dom).show();
+			}
+		}
+	});
+}
