@@ -1,0 +1,10 @@
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\inner\IUserAssembleService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\Application.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\outer\UserRestService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\config\CorsConfig.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\inner\IConfigCrossAssembleService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\aoc\HttpRequestAspect.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\inner\impl\ConfigCrossAssembleService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\outer\ConfigCrossRestService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\service\inner\impl\UserAssembleService.java
+D:\ProjectItem\eclipse\workSpace\springboot2\Trunk\Code\pms-bp\pms-bp-api\src\main\java\org\wisdom\pms\bp\api\config\RedisConfig.java

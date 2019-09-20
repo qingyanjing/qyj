@@ -1,0 +1,11 @@
+org\wisdom\pms\bp\api\service\inner\impl\UserAssembleService.class
+org\wisdom\pms\bp\api\service\inner\IUserAssembleService.class
+org\wisdom\pms\bp\api\config\RedisConfig$1.class
+org\wisdom\pms\bp\api\service\inner\impl\ConfigCrossAssembleService.class
+org\wisdom\pms\bp\api\service\outer\UserRestService.class
+org\wisdom\pms\bp\api\Application.class
+org\wisdom\pms\bp\api\config\CorsConfig.class
+org\wisdom\pms\bp\api\config\RedisConfig.class
+org\wisdom\pms\bp\api\aoc\HttpRequestAspect.class
+org\wisdom\pms\bp\api\service\inner\IConfigCrossAssembleService.class
+org\wisdom\pms\bp\api\service\outer\ConfigCrossRestService.class

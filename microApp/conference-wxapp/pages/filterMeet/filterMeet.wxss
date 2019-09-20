@@ -1,5 +1,0 @@
-/* pages/filterMeet/filterMeet.wxss */
-text{font-size: 28rpx;}
-@import "../lits-item//list-item.wxss";
-.filte-title{color: #9a9a9a;padding:10rpx 0 16rpx 10rpx}
-.noMain{text-align: center;padding-top: 20rpx;}

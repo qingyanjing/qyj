@@ -1,8 +1,0 @@
-<view class="container">
-        <!--标题-->
-    <view class="title">
-        {{chartTitle}}
-    </view>
-    <!--绘制canvas-->
-    <canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
-</view>

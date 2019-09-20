@@ -1,5 +1,0 @@
-org\wisdom\wx\api\config\ConverterConfig.class
-org\wisdom\wx\api\service\outer\MRRestService.class
-org\wisdom\wx\api\config\DateJacksonSerializer.class
-org\wisdom\wx\api\config\DateJacksonConverter.class
-org\wisdom\wx\Application.class

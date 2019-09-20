@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.wisdom.pms.bp.dao.crud.UserMapper" >
+  <resultMap id="BaseResultMap" type="org.wisdom.pms.bp.model.crud.User" >
+    <id column="id" property="Id" jdbcType="VARCHAR" />
+    <result column="name" property="Name" jdbcType="VARCHAR" />
+    <result column="pass" property="Pass" jdbcType="VARCHAR" />
+    <result column="updateTime" property="updateTime" jdbcType="DATE" />
+    <result column="createTime" property="createTime" jdbcType="DATE" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="dept" property="dept" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, pass, updateTime, createTime, role, dept
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.wisdom.pms.bp.model.crud.UserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{Id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from user
+    where id = #{Id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.wisdom.pms.bp.model.crud.UserExample" >
+    delete from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.wisdom.pms.bp.model.crud.User" >
+    insert into user (id, name, pass, 
+      updateTime, createTime, role, 
+      dept)
+    values (#{Id,jdbcType=VARCHAR}, #{Name,jdbcType=VARCHAR}, #{Pass,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=DATE}, #{createTime,jdbcType=DATE}, #{role,jdbcType=VARCHAR}, 
+      #{dept,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wisdom.pms.bp.model.crud.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="Id != null" >
+        id,
+      </if>
+      <if test="Name != null" >
+        name,
+      </if>
+      <if test="Pass != null" >
+        pass,
+      </if>
+      <if test="updateTime != null" >
+        updateTime,
+      </if>
+      <if test="createTime != null" >
+        createTime,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="dept != null" >
+        dept,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="Id != null" >
+        #{Id,jdbcType=VARCHAR},
+      </if>
+      <if test="Name != null" >
+        #{Name,jdbcType=VARCHAR},
+      </if>
+      <if test="Pass != null" >
+        #{Pass,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=DATE},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=DATE},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="dept != null" >
+        #{dept,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.wisdom.pms.bp.model.crud.UserExample" resultType="java.lang.Integer" >
+    select count(*) from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update user
+    <set >
+      <if test="record.Id != null" >
+        id = #{record.Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.Name != null" >
+        name = #{record.Name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.Pass != null" >
+        pass = #{record.Pass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        updateTime = #{record.updateTime,jdbcType=DATE},
+      </if>
+      <if test="record.createTime != null" >
+        createTime = #{record.createTime,jdbcType=DATE},
+      </if>
+      <if test="record.role != null" >
+        role = #{record.role,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dept != null" >
+        dept = #{record.dept,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update user
+    set id = #{record.Id,jdbcType=VARCHAR},
+      name = #{record.Name,jdbcType=VARCHAR},
+      pass = #{record.Pass,jdbcType=VARCHAR},
+      updateTime = #{record.updateTime,jdbcType=DATE},
+      createTime = #{record.createTime,jdbcType=DATE},
+      role = #{record.role,jdbcType=VARCHAR},
+      dept = #{record.dept,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.wisdom.pms.bp.model.crud.User" >
+    update user
+    <set >
+      <if test="Name != null" >
+        name = #{Name,jdbcType=VARCHAR},
+      </if>
+      <if test="Pass != null" >
+        pass = #{Pass,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        updateTime = #{updateTime,jdbcType=DATE},
+      </if>
+      <if test="createTime != null" >
+        createTime = #{createTime,jdbcType=DATE},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="dept != null" >
+        dept = #{dept,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{Id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.wisdom.pms.bp.model.crud.User" >
+    update user
+    set name = #{Name,jdbcType=VARCHAR},
+      pass = #{Pass,jdbcType=VARCHAR},
+      updateTime = #{updateTime,jdbcType=DATE},
+      createTime = #{createTime,jdbcType=DATE},
+      role = #{role,jdbcType=VARCHAR},
+      dept = #{dept,jdbcType=VARCHAR}
+    where id = #{Id,jdbcType=VARCHAR}
+  </update>
+</mapper>
