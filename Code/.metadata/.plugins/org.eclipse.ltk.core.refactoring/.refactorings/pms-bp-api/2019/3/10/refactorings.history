@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;pms-bp-api/src/main/java/org/wisdom/pms/bp/api/config/CorssConfig.java&apos; to &apos;CorsConfig.java&apos;" description="Rename resource &apos;CorssConfig.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/org/wisdom/pms/bp/api/config/CorssConfig.java" name="CorsConfig.java" stamp="1551837398206" updateReferences="true"/>
-</session>

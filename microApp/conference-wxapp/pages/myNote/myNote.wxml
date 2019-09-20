@@ -1,0 +1,33 @@
+<!--pages/myNote.wxml-->
+<view class='pannel'>
+<text class='header'>会议标题</text>
+<view class='content-view'>
+    <text class='content'>2018/8/8:笔记内容……………………</text>
+    <view class='icon-block'>
+    <image class='icon' mode="widthFix" src='../../images/icon/readNote.png'></image>
+    <text class='content'>查看</text>
+    <image class='icon' mode="widthFix" src='../../images/icon/updateNote.png'></image>
+    <text class='content'>修改</text>
+    <image class='icon' mode="widthFix" src='../../images/icon/delNote.png'></image>
+    <text class='content'>删除</text>
+    </view>
+</view>
+</view>
+
+  <view wx:for="{{noteList}}" class='pannel'>
+<text class='header'>{{item.header}}</text>
+<view class='content-view'>
+    <text class='content'>{{item.createTime}}:{{item.noteContent}}</text>
+    <view class='icon-block'>
+    <image class='icon' mode="widthFix" src='../../images/icon/readNote.png'></image>
+    <text class='content'>查看</text>
+    <image class='icon' mode="widthFix" src='../../images/icon/updateNote.png'></image>
+    <text class='content'>修改</text>
+    <image class='icon' mode="widthFix" src='../../images/icon/delNote.png'></image>
+    <text class='content'>删除</text>
+    </view>
+</view>
+</view>
+
+
+

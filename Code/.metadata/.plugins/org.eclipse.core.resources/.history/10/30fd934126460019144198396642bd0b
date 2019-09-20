@@ -1,9 +1,0 @@
-package springMvcTheory.webmvc.servlet;
-/**
-* @author 作者 E-mail:
-* @version 创建时间：2019年3月14日 下午2:55:49
-* 类说明
-*/
-public class HPDispatcherSevlet {
-
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;UserQueryBo.java&apos; to &apos;user&apos;" description="Move &apos;UserQueryBo.java&apos; to &apos;user&apos;" destination="src/main/java/org/wisdom/pms/bp/bo/user" element1="src/main/java/org/wisdom/pms/bp/bo/UserQueryBo.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1552023950990" updateReferences="true"/>
-</session>

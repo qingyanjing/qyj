@@ -1,7 +1,0 @@
-package springMvcTheory.webmvc.servlet;
-
-import javax.servlet.http.HttpServlet;
-
-public class HPDispatcherSevlet extends HttpServlet{
-
-}

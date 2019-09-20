@@ -1,0 +1,46 @@
+<!--pages/my/my.wxml-->
+<view class="my-content">
+<view class="user-container bg-white">
+    
+    <view class="userinfo">
+        
+        <block wx:if="{{!hasLogin}}">
+            <image class="userinfo-avatar" src="../../images/login.png" background-size="cover" catchtap="doLogin"></image>
+            <text class="userinfo-nickname">点击登录</text>
+        </block>
+        
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+
+    </view>
+
+</view>
+    <view class="tab-container bg-white">
+
+    <view class="tab-item " hover-class="tab-item-hover" bindtap="myMeet" data-type="collect">
+        <view>
+            <image src="../../images/icon/star-iocn.png" mode="aspectFit" class="tab-icon"></image>
+            <text class="tab-text">已收藏</text>
+        </view>
+        <view class="tab-arrow"></view>
+    </view>
+
+    <view class="tab-item" hover-class="tab-item-hover" catchtap="goMyBooks">
+        <view>
+            <image src="../../images/icon/biji-icon.png" mode="aspectFit" class="tab-icon"></image>
+            <text class="tab-text">我的笔记</text>
+        </view>
+        <view class="tab-arrow"></view>
+    </view>
+    <view class="tab-item" hover-class="tab-item-hover" bindtap="myMeet" data-type="partake">
+        <view>
+            <image src="../../images/icon/canyu-iocn.png" mode="aspectFit" class="tab-icon"></image>
+            <text class="tab-text">已参与的会议</text>
+        </view>
+        <view class="tab-arrow"></view>
+    </view>
+</view>
+
+</view>

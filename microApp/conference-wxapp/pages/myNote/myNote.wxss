@@ -1,0 +1,37 @@
+/* pages/myNote.wxss */
+.pannel{
+  margin:2vw 3vw;
+  position:relative;
+  font-family: 'Open Sans', sans-serif;
+    color: #4A4A4A ;
+    display: inline-block;
+    padding: 2vw;
+    border: 1px solid #ccc;
+    border-radius: 2vw;
+}
+.header{
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon{
+  width: 7vw;
+  vertical-align: middle;
+  }
+.content{
+  font-size: 4vw;  
+}
+.content-view{
+ 
+}
+.icon-block{
+  display: flex;
+  align-items: center;
+  float: right;
+  padding-top: 5vw;
+  padding-right: 3vw;
+}
+.tail-block{
+  float: right;
+}

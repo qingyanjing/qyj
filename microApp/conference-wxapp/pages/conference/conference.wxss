@@ -1,0 +1,8 @@
+/* pages/conference/conference.wxss */
+@import "../lits-item//list-item.wxss";
+page{background: #eaeae6;}
+text{font-size: 28rpx;}
+.more-conference{float: right;color: #0079f3;}
+.createBtn{position: fixed;bottom: 10rpx;width: 98%;left: 1%;}
+.search-box{position: fixed;top: 0;width: 100%}
+.meet-box{margin-top: 44px;}

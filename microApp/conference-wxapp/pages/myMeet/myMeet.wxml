@@ -1,0 +1,11 @@
+<!--pages/myMeet/myMeet.wxml-->
+<import src="../lits-item/list-item.wxml" />
+<view class="myMeet">
+    <view wx:if="{{myMeetList}}">
+        <template is="meetTemplate" data="{{list:myMeetList}}"></template>
+    </view>
+    <view class='noMain' wx:else> 
+        <van-icon name="search" size="40px"/>
+        <view style='margin-top:16rpx;'>抱歉没有相关的会议</view>
+    </view>
+</view>

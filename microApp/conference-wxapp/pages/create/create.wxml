@@ -1,0 +1,84 @@
+<!--pages/create/create.wxml-->
+<view class="create-content">
+    <van-cell-group>
+  <van-field
+    value="{{ createName }}"
+    label="会议名称"
+    placeholder="请输入会议名称"
+    required
+    border="true"
+    bind:input="createNameMethod"
+  />
+  <van-field
+    value="{{ createPerson }}"
+    label="创建人"
+    required
+    border="true"
+    readonly
+  />
+ 
+    <van-field
+    value="{{ createtime }}"
+    label="会议时间"
+     placeholder="请选择会议时间"
+    required
+    border="true"
+    readonly
+    bindtap="selectTimeMethod"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  />
+  
+   <van-field
+    value="{{ createContent }}"
+    label="会议内容"
+    type="textarea"
+    placeholder="请输入大致会议内容"
+    required
+    border="true"
+    autosize
+    bind:input="createContentMethod"
+  />
+  <van-collapse  value="{{ activeNames }}">
+  <van-collapse-item title="选择参会人员" name="1" id="collapse" bind:tap="collapseChange"> 
+    <van-checkbox-group value="{{ membersResult }}" bind:change="checkboxChange">
+  <van-cell-group >
+    <van-cell
+      wx:for="{{ membersList }}"
+      wx:key="index"
+      title="{{ item.name }}"
+      clickable
+      data-name="{{ item.id }}"
+      bind:click="toggle"
+    >
+      <van-checkbox  class="checkboxes-{{ item.id }}" name="{{ item.id }}" />
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+  </van-collapse-item>
+</van-collapse>
+<view class="picture-box">
+  <image class="" wx:for="{{pictureSrc}}" wx:key="index" src="{{item}}">
+    
+  </image>
+</view>
+  <view class="" style="padding-left:292rpx;padding-top:16rpx;">
+      <van-button plain type="primary" bind:click="addPicture">会议照片</van-button>
+  </view>
+
+</van-cell-group>
+ <button type="warn" style="margin-top:10rpx;" bindtap="create">确定创建</button>
+ <van-popup
+  show="{{ popupShow }}"
+  position="bottom"
+  overlay="true"
+  bind:close="onClose"
+>
+<van-datetime-picker
+  type="datetime"
+  value="{{ currentDate }}"
+  class="dateTime"
+  bind:change="timeonChange"
+  bind:confirm="timeConfirm"
+  bind:cancel="timeConfirm"
+/>
+</van-popup>
+</view>

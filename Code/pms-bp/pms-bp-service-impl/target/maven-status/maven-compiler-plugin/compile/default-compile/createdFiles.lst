@@ -1,7 +1,0 @@
-org\wisdom\pms\bp\service\inner\IConfigCross.class
-org\wisdom\pms\bp\service\inner\impl\Users.class
-org\wisdom\pms\bp\dao\crud\RbxConfigCrossMapper.class
-org\wisdom\pms\bp\dao\crud\UserMapper.class
-org\wisdom\pms\bp\service\outer\impl\PmsService.class
-org\wisdom\pms\bp\service\inner\impl\ConfigCross.class
-org\wisdom\pms\bp\service\inner\IUsers.class

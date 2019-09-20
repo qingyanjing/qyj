@@ -1,0 +1,4 @@
+/* pages/create/create.wxss */
+.create-content .van-collapse-item__content{padding-top: 0;padding-bottom: 0;}
+.picture-box{padding: 16rpx 40rpx;}
+.picture-box image{width: 200rpx;height: 160rpx;margin-left: 16rpx;}

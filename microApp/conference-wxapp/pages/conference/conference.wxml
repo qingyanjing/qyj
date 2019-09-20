@@ -1,0 +1,33 @@
+<!--pages/conference/conference.wxml-->
+<import src="../lits-item/list-item.wxml" />
+<view class="conference-box">
+<view class="search-box">
+    <van-search
+  value="{{ value }}"
+  placeholder="请输入会议名称关键词"
+  use-action-slot
+  background="#cbd4dc"
+  bind:search="onSearch"
+  bind:change="searchChange"
+  >
+  <view slot="action" bind:tap="onSearch" style="#000">搜索</view>
+</van-search>
+</view>
+    <!-- <view class="title-box" style="margin-top:0;">
+    <text class="">知识分享类会议</text>
+    <view class="more-conference">
+          <text>更多</text> <van-icon name="more-o" style="float:right;margin-top:4rpx;" />
+    </view>
+    </view> -->
+    <view class="meet-box" >
+          <template is="meetTemplate" data="{{list:meetList}}"></template>
+    </view>
+ 
+    <!-- <view class="title-box" >
+    <text class="">工作类会议</text>
+     <view class="more-conference">
+          <text>更多</text> <van-icon name="more-o" style="float:right;margin-top:4rpx;" />
+    </view>
+    </view> -->
+   <button wx: class="createBtn" type="warn" style="margin-top:10rpx;" bindtap="goCreate" >创建会议</button>
+</view>

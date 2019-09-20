@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "会议详情",
+  "usingComponents": {
+    "van-tag": "../../vant-weapp/dist/tag/index",
+    "van-icon": "../../vant-weapp/dist/icon/index",
+    "van-field": "../../vant-weapp/dist/field/index"
+  }
+}

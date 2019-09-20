@@ -1,0 +1,17 @@
+<!--pages/lits-item/list-item.wxml-->
+<template name="meetTemplate">
+    <view class="nearby-content">
+   <view class="nearby-box" wx:for="{{list}}" wx:key="idnex"
+    bindtap="meetRecentMethod" data-id="{{item.id}}">
+       <image class="" src="../../images/icon/images/swiper-img1.jpg"/>
+       <view class="nearby-text" >
+            <text class="nearby-name">{{item.header}}</text>
+            <text class="nearby-personnel">发起人: {{item.organizer.name}}</text>
+            <text class="nearby-time">会议时间: {{item.updateTime}}</text>
+       </view>
+       <view class="" style="clear:both">
+           
+       </view>
+   </view>
+</view>
+</template>

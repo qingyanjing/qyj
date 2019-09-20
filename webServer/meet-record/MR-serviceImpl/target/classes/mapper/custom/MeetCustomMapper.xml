@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wisdom.wx.bp.dao.custom.MeetCustomMapper">
+  <resultMap id="BaseResultMap2" type="org.wisdom.wx.bp.model.crud.Meet">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="M_CONTENT" jdbcType="VARCHAR" property="content" />
+    <result column="M_HEADER" jdbcType="VARCHAR" property="header" />
+    <result column="M_MEMBERS_ID" jdbcType="VARCHAR" property="membersId" />
+    <result column="M_PICTURE" jdbcType="VARCHAR" property="picture" />
+    <result column="M_DATE" jdbcType="TIMESTAMP" property="date" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="M_ORGANIZER_ID" jdbcType="VARCHAR" property="organizerId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    meet.id, meet.M_CONTENT, meet.M_HEADER, meet.M_MEMBERS_ID, meet.M_PICTURE, meet.M_DATE, meet.UPDATE_TIME, meet.M_ORGANIZER_ID
+  </sql>
+  <select id="getMeetByMember" parameterType="java.lang.String"  resultMap="BaseResultMap2" >
+      select
+    DISTINCT T3.id, T3.M_CONTENT, T3.M_HEADER, T3.M_MEMBERS_ID, T3.M_PICTURE, T3.M_DATE, T3.UPDATE_TIME, T3.M_ORGANIZER_ID
+    FROM meet T3  WHERE T3.id in (SELECT T2.meet_id FROM user T1 LEFT JOIN m_u_numbers T2  on T1.id=T2.user_id
+    WHERE T1.id=#{id,jdbcType=VARCHAR}) or T3.id in (SELECT meet.id FROM meet WHERE meet.M_ORGANIZER_ID=#{id,jdbcType=VARCHAR})
+    order by T3.M_DATE desc
+
+  </select>
+</mapper>

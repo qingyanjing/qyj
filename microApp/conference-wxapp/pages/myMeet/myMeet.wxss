@@ -1,0 +1,4 @@
+/* pages/myMeet/myMeet.wxss */
+text{font-size: 28rpx;}
+@import "../lits-item//list-item.wxss";
+.noMain{text-align: center;padding-top: 20rpx;}

@@ -1,0 +1,9 @@
+/* pages/lits-item/list-item.wxss */
+.nearby-box image{width: 240rpx;height:160rpx; float: left;}
+.nearby-content{padding: 0 20rpx;background: #fff;}
+.nearby-text{float: left;margin-left: 48rpx;}
+.nearby-text text{display: block;}
+.nearby-text .nearby-name{font-size: 32rpx;font-weight: bold;margin-top:10rpx;color: #8a929a}
+.nearby-text .nearby-personnel{color: #8a929a;margin: 10rpx 0;}
+.nearby-text .nearby-time{color: #8a929a}
+.nearby-box{border-bottom: 1px solid #cbd4dc;padding:15rpx 0;}

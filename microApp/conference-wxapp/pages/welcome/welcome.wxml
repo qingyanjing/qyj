@@ -1,0 +1,38 @@
+<!--pages/welcome/welcome.wxml-->
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <!-- <image class="remind-img" src="/images/more/loading.gif"></image> -->
+  </view>
+  <block wx:else>
+   <text class="welcome-title"> 电科会议记录 </text>
+     <view class="logo-box"><image class="dk-logo" src="/images/icon/dk_logo-sm.png" ></image></view>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <view class="confirm-btn">
+          <button class="logo-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">进入首页</button>
+        </view>
+        <text class="copyright">欢迎体验电科会议记录小程序</text>
+      </view>
+    </view>
+  </block>
+    <van-dialog
+  use-slot
+  async-close
+  show="{{showDialog}}"
+  show-cancel-button
+  bind:close="onDialogClose"
+>
+<van-field
+  value="{{ username }}"
+  label="姓名"
+  bind:input="usernameValue"
+  placeholder="请输入您的姓名"
+/>
+</van-dialog>
+</view>

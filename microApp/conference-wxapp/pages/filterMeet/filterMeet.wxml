@@ -1,0 +1,12 @@
+<!--pages/filterMeet/filterMeet.wxml-->
+<import src="../lits-item/list-item.wxml" />
+<view class='filte-box' wx:if="{{showFilter}}">
+  <view class='filte-title' >以下为关键字"{{keyword}}"有关的会议</view>
+  <view class='filte-list'>
+   <template is="meetTemplate" data="{{list:searchMeetList}}"></template>
+  </view>
+</view>
+<view class='noMain' wx:else> 
+<van-icon name="search" size="40px"/>
+<view style='margin-top:16rpx;'>抱歉没有搜到与"{{keyword}}"相关的会议</view>
+</view>

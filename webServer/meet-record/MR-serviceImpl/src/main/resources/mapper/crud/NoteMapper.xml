@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.wisdom.wx.bp.dao.crud.NoteMapper" >
+  <resultMap id="BaseResultMap" type="org.wisdom.wx.bp.model.crud.Note" >
+    <id column="note_id" property="noteId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="meet_id" property="meetId" jdbcType="VARCHAR" />
+    <result column="note_content" property="noteContent" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    note_id, user_id, meet_id, note_content, create_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.wisdom.wx.bp.model.crud.NoteExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from note
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from note
+    where note_id = #{noteId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from note
+    where note_id = #{noteId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.wisdom.wx.bp.model.crud.NoteExample" >
+    delete from note
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.wisdom.wx.bp.model.crud.Note" >
+    insert into note (note_id, user_id, meet_id, 
+      note_content, create_time)
+    values (#{noteId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{meetId,jdbcType=VARCHAR}, 
+      #{noteContent,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.wisdom.wx.bp.model.crud.Note" >
+    insert into note
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="noteId != null" >
+        note_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="meetId != null" >
+        meet_id,
+      </if>
+      <if test="noteContent != null" >
+        note_content,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="noteId != null" >
+        #{noteId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="meetId != null" >
+        #{meetId,jdbcType=VARCHAR},
+      </if>
+      <if test="noteContent != null" >
+        #{noteContent,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.wisdom.wx.bp.model.crud.Note" >
+    update note
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="meetId != null" >
+        meet_id = #{meetId,jdbcType=VARCHAR},
+      </if>
+      <if test="noteContent != null" >
+        note_content = #{noteContent,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where note_id = #{noteId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.wisdom.wx.bp.model.crud.Note" >
+    update note
+    set user_id = #{userId,jdbcType=VARCHAR},
+      meet_id = #{meetId,jdbcType=VARCHAR},
+      note_content = #{noteContent,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where note_id = #{noteId,jdbcType=VARCHAR}
+  </update>
+</mapper>
