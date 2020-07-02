@@ -22,7 +22,7 @@
   	</modules>
 	<properties>
 		<java.version>1.8</java.version>
-		<mysql.runtime.version>8.0.12</mysql.runtime.version>
+		<mysql.runtime.version>8.0.16</mysql.runtime.version>
 		<mybatis.runtime.version>1.3.0</mybatis.runtime.version>
 		<oracle.runtime.version>11.2.0.2.0</oracle.runtime.version>
 		<spring-boot-starter-data-redis.version>1.4.3.RELEASE</spring-boot-starter-data-redis.version>
