@@ -28,7 +28,7 @@
 		<spring-boot-starter-data-redis.version>1.4.3.RELEASE</spring-boot-starter-data-redis.version>
 		<commons-pool2.version>2.6.0</commons-pool2.version>
 		<org.apache.commons.version>3.7</org.apache.commons.version>
-		<com.github.pagehelper.version>5.0.0</com.github.pagehelper.version>
+		<com.github.pagehelper.version>5.3.1</com.github.pagehelper.version>
 		<pagehelper.version>1.2.10</pagehelper.version>
 	</properties>
 	<!--子类直接继承-->
